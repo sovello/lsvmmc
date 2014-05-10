@@ -59,7 +59,7 @@
       <status>required:false</status>
       <configuration name="email" path="to" values="single">
         <displayName>Email Address</displayName>
-        <value>root@localhost</value>
+        <value>makhatemakhate@gmail.com</value>
       </configuration>
       <configuration name="subject" values="single" locale="en_US">
         <displayName>Subject Line</displayName>
