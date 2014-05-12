@@ -5,7 +5,7 @@
    <displayName>Demo Person</displayName>   
    <category>Form</category>
    <description>Sets up the Demo Person form with extra fields for favorite animals and favorite color</description>
-   <version>4.0.1</version> 
+   <version>4.1.0</version> 
    <requirement name='Person'>
      <atLeast version='4.1'/>
      <lessThan version='4.2'/>
@@ -102,6 +102,8 @@
               <value>default:Favorite Animal</value> 
               <!-- Set the default header for this field to be 'Favorite Animal'-->
             </configuration>
+            </configuration>
+            </configuration>
 	    </configurationGroup>
           <configurationGroup name='fav_color'>
             <!-- The data definining the 'fav_color' field of DemoPerson -->
@@ -112,6 +114,8 @@
             <configuration name='headers' type='delimited' values='many'> 
               <value>default:Favorite Color</value> 
               <!-- Set the default header for this field to be 'Favorite Color'-->
+            </configuration>
+            </configuration>
             </configuration>       
 	    </configurationGroup>
 	  </configurationGroup>

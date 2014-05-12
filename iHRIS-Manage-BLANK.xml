@@ -36,6 +36,7 @@
     <enable name="messageBox" />
     <enable name="messageNotice" />
     <enable name="messageHandler" />
+
     <path name="classes">
       <value>./lib</value>
     </path>
