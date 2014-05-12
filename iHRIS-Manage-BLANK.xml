@@ -20,6 +20,11 @@
       <atLeast version="4.1" />
       <lessThan version="4.2" />
     </requirement>
+    <requirement name='DemoPerson'> 
+     <atLeast version='4.1' />
+     <lessThan version='4.2' />
+    </requirement>
+
     <enable name="default-locales" />
     <enable name="PersonContact" />
     <enable name="ihris-manage-PersonDemographic" />
