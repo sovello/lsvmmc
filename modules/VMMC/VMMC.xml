@@ -1,6 +1,6 @@
 <?xml version="1.0"?>       
 <!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
-<I2CEConfiguration name='VMMC'>
+<I2CEConfiguration name="VMMC">
  <metadata>
    <displayName>VMMC Fields</displayName>
    <category>Form</category>
@@ -20,6 +20,8 @@
 
 <configurationGroup name="VMMC" path="/">
     <status>overwrite:true</status>
+
+    <!-- Optional Functionality -->
     <configurationGroup name="tasks" path="/I2CE/tasks/task_description">
         <configuration name="can_edit_database_list_marital_status">
             <value>Edit Marital Status</value>
@@ -43,12 +45,15 @@
             <value>can_edit_database_list_marital_status</value>
         </configuration>
     </configurationGroup>
+    <!-- End: Optional Functionality -->
+
+    <!-- Definition of Magic data forms -->
     <configurationGroup name="forms" path="/modules/forms/forms">
         <configuration name="class" values="single">
             <value>I2CE_SimpleList</value>
         </configuration>
         <configuration name="display" values="single">
-            <value>VMMC Fo-rm</value>
+            <value>Marital Status</value>
         </configuration>
     </configurationGroup>
     <configurationGroup name="person">
@@ -56,7 +61,8 @@
             <value>VMMC</value>
         </configuration>
     </configurationGroup>
-    <!--End of definition for forms-->
+    <!--End of definition for Magic data forms-->
+
     <configurationGroup name="formClasses" path="modules/forms/formClasses">
         <configuration name="extends">
             <value>iHRIS_ManagePerson</value>
@@ -70,7 +76,7 @@
                     <value>default:Date Of Birth</value>
                 </configuration>
             </configurationGroup>
-            <configurationGroup name="marital_status">
+            <configurationGroup name='marital_status'>
                 <configuration name="formfield">
                     <value>MAP</value>
                 </configuration>
