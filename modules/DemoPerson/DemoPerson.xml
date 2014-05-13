@@ -111,10 +111,10 @@
               <value>MAP</value>
               <!-- Set the field to have type MAP. By default, this field will be one of the ids of the form fav_color-->
             <configuration>
-            <configuration name='headers' type='delimited' values='many'> 
+             <configuration name='headers' type='delimited' values='many'>
               <value>default:Favorite Color</value> 
               <!-- Set the default header for this field to be 'Favorite Color'-->
-            </configuration>
+             </configuration>
             </configuration>
             </configuration>       
 	    </configurationGroup>
