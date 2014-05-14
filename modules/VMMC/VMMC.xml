@@ -1,98 +1,92 @@
-<?xml version="1.0"?>       
+<?xml version="1.0"?>
 <!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
 <I2CEConfiguration name="VMMC">
- <metadata>
-   <displayName>VMMC Fields</displayName>
-   <category>Form</category>
-   <description>This module adds several indicators for specific to the VMMC exercise</description>
-   <creator>Jhpeigo Lesotho</creator>
-   <email>Moipone.Mphahlela@jhpiego.org</email>
-   <version>4.1.0</version> 
-   <requirement name='Person'>
-     <atLeast version='4.1'/>
-     <lessThan version='4.2'/>
-   </requirement>
-   <path name='templates'>
-      <value>./templates</value>
-   </path>
-   <priority>300</priority>  
- </metadata>
+    <metadata>
+        <displayName>VMMC Fields</displayName>
+        <category>Form</category>
+        <description>This module adds several indicators specific to the VMMC exercise</description>
+        <creator>Jhpeigo Lesotho</creator>
+        <email>Moipone.Mphahlela@jhpiego.org</email>
+        <version>4.1.0</version>
+        <requirement name='Person'>
+            <atLeast version='4.1'/>
+            <lessThan version='4.2'/>
+        </requirement>
+        <path name='templates'>
+            <value>./templates</value>
+        </path>
+        <priority>300</priority>
+    </metadata>
 
-<configurationGroup name="VMMC" path="/">
-    <status>overwrite:true</status>
-
-    <!-- Optional Functionality -->
-    <configurationGroup name="tasks" path="/I2CE/tasks/task_description">
-        <configuration name="can_edit_database_list_marital_status">
-            <value>Edit Marital Status</value>
-        </configuration>
-        <configuration name="can_view_database_marital_status">
-            <value>View the training course status list</value>
-        </configuration>
-    </configurationGroup>
-    <configurationGroup name="tasks_trickle_down" path="/I2CE/tasks/task_trickle_down">
-        <configuration name="can_view_database_list_marital_status" values="many">
-            <value>can_view_database_lists</value>
-        </configuration>
-        <configuration name="can_edit_database_list_marital_status" values="many">
-            <value>can_view_database_list_marital_status</value>
-            <value>can_edit_database_lists</value>
-        </configuration>
-    </configurationGroup>
-    <configurationGroup name="role_trickle_down" path="/I2CE/tasks/role_trickle_down">
-        <configuration name="training_manager" values="many">
-            <status>uniquemerge:true</status>
-            <value>can_edit_database_list_marital_status</value>
-        </configuration>
-    </configurationGroup>
-    <!-- End: Optional Functionality -->
-
-    <!-- Definition of Magic data forms -->
-    <configurationGroup name="forms" path="/modules/forms/forms">
-        <configuration name="class" values="single">
-            <value>I2CE_SimpleList</value>
-        </configuration>
-        <configuration name="display" values="single">
-            <value>Marital Status</value><!--what is the formname for Marital Status? bBTW marital_status is already there, you just need to use it-->
-        </configuration>
-    </configurationGroup>
-    <configurationGroup name="person">
-        <configuration name="class">
-            <value>VMMC</value><!--this is ok, that the person form uses the class VMMC which you need to define in /modules/forms/formClasses-->
-        </configuration>
-    </configurationGroup>
-    <!--End of definition for Magic data forms-->
-
-    <configurationGroup name="formClasses" path="modules/forms/formClasses"><!-- this is an absolute path, it had to start with / -->
-        <configuration name="extends"><!--what class here extends iHRIS_ManagePerson? -->
-            <value>iHRIS_ManagePerson</value>
-        </configuration>
-        <configurationGroup name="fields">
-            <configurationGroup name="date_of_birth">
-                <configuration name="formfield">
-                    <value>DATE_YMD</value>
+    <configurationGroup name='VMMC' path='/'>
+        <status>overwrite:true</status>
+        <!-- Form -->
+        <configurationGroup name='forms' path='/modules/forms/forms'>
+            <configurationGroup name='date_of_visit'>    <!-- what exactly is this name for? -->
+                <configuration name='class' values='single'>
+                    <value>I2CE_SimpleList</value> <!-- What is this? I can't find anything to understand in the wiki-->
                 </configuration>
-                <configuration name="headers" type="delimited" values="many">
-                    <value>default:Date Of Birth</value>
+                <configuration name='display' values='single'>
+                    <value>VMMC Form</value>
                 </configuration>
             </configurationGroup>
-            <configurationGroup name='marital_status'>
-                <configuration name="formfield">
-                    <value>MAP</value>
-                </configuration>
-                <configuration name="headers" type="delimited" values="many">
-                    <value>default:Marital Status</value>
-                </configuration>
+
+            <configurationGroup name='person'>
+                <configuration name='class'>
+                    <value>VMMC</value>     <!-- Here I understand that this is the class that is going to be defined -->
+                </configuration>            <!-- below under /modules/forms/formsClasses -->
             </configurationGroup>
-            <configurationGroup name="date_of_visit">
-                <configuration name="formfield">
-                    <value>DATE_YMD</value>
+        </configurationGroup>
+        <!--End of Form-->
+
+        <!--Classes-->
+        <configurationGroup name='formClasses' path='/modules/forms/formClasses'>
+            <configurationGroup name='VMMC'>          <!-- The VMMC class here-->
+                <configuration name='extends'>        <!-- extends -->
+                    <value>iHRIS_ManagePerson</value> <!-- the class iHRIS_ManagePerson -->
                 </configuration>
-                <configuration name="headers" type="delimited" values="many">
-                    <value>default:Date Of Visit</value>
-                </configuration>
+                <configurationGroup name='fields'>    <!-- Defining fields start here -->
+                    <configurationGroup name='date_of_visit'> <!-- The first field: date_of_visit -->
+                        <configuration name='formfield'>
+                            <displayName>The form field type</displayName>
+                            <value>DATE_YMD</value>
+                        </configuration>
+                        <configuration name='headers' type='delimited' values='many'>
+                            <value>default:Insert Date</value>
+                        </configuration>
+                    </configurationGroup>                    <!--End of first field: date_of_visit -->
+                    <configurationGroup name="birth_date">   <!-- The second field: birth_date -->
+                        <displayName>The field 'birth_date'</displayName>
+                        <configuration name="formfield">
+                            <displayName>The form field type</displayName>
+                            <value>DATE_YMD</value>
+                        </configuration>
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.1</version>
+                            <value>default:Date of Birth</value>
+                        </configuration>
+                        <configuration name="default_eval">
+                            <displayName>The default value for this field as an eval string</displayName>
+                            <value>I2CE_Date::blank()</value>
+                        </configuration>
+                    </configurationGroup>                      <!--End of second field: birth_date -->
+                    <configurationGroup name="marital_status"> <!-- The third field: marital_status -->
+                        <displayName>The field 'marital_status'</displayName>
+                        <version>3.2.5</version>
+                        <configuration name="formfield">
+                            <displayName>The form field type</displayName>
+                            <value>MAP</value>
+                        </configuration>
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.1</version>
+                            <value>default:Marital Status</value>
+                        </configuration>
+                    </configurationGroup>                     <!--End of third field: marital_status -->
+                </configurationGroup>
             </configurationGroup>
         </configurationGroup>
     </configurationGroup>
-</configurationGroup>
+    <!--End of Class-->
 </I2CEConfiguration>
