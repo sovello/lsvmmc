@@ -20,7 +20,7 @@
       <atLeast version="4.1" />
       <lessThan version="4.2" />
     </requirement>
-    <requirement name="VMMC">
+    <requirement name="vmmc_fun">
      <atLeast version='4.1' />
      <lessThan version='4.2' />
     </requirement>

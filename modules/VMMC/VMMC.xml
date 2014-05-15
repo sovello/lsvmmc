@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
-<I2CEConfiguration name="VMMC">
+<I2CEConfiguration name="vmmc_fun">
     <metadata>
         <displayName>VMMC Fields</displayName>
         <category>Form</category>
@@ -17,14 +17,18 @@
         </path>
         <priority>300</priority>
     </metadata>
+    <!--end of metadata -->
+    <!--start: configuring forms and fields-->
+    <configurationGroup name='vmmc_fun' path='/'>
+        <status>overwrite:true</status> <!-- need for development phase -->
 
-    <configurationGroup name='VMMC' path='/'>
-        <status>overwrite:true</status>
-        <!-- Form -->
+        <!-- omitting the optional functionality as I won't need to use lists as yet -->
+
+        <!-- Form: the vmmc_form that will use VMMC class -->
         <configurationGroup name='forms' path='/modules/forms/forms'>
-            <configurationGroup name='date_of_visit'>    <!-- what exactly is this name for? -->
+            <configurationGroup name='vmmc_form'>    <!-- This is the form that is intended to hold fields -->
                 <configuration name='class' values='single'>
-                    <value>I2CE_SimpleList</value> <!-- What is this? I can't find anything to understand in the wiki-->
+                    <value>I2CE_SimpleList</value>  <!-- I'm not sure about this. I don't understand this part -->
                 </configuration>
                 <configuration name='display' values='single'>
                     <value>VMMC Form</value>
@@ -33,8 +37,8 @@
 
             <configurationGroup name='person'>
                 <configuration name='class'>
-                    <value>VMMC</value>     <!-- Here I understand that this is the class that is going to be defined -->
-                </configuration>            <!-- below under /modules/forms/formsClasses -->
+                    <value>VMMC</value>     <!-- the VMMC class -->
+                </configuration>
             </configurationGroup>
         </configurationGroup>
         <!--End of Form-->
@@ -45,17 +49,21 @@
                 <configuration name='extends'>        <!-- extends -->
                     <value>iHRIS_ManagePerson</value> <!-- the class iHRIS_ManagePerson -->
                 </configuration>
-                <configurationGroup name='fields'>    <!-- Defining fields start here -->
-                    <configurationGroup name='date_of_visit'> <!-- The first field: date_of_visit -->
+                <configurationGroup name='fields'>
+
+                    <configurationGroup name='date_of_visit'>
                         <configuration name='formfield'>
                             <displayName>The form field type</displayName>
                             <value>DATE_YMD</value>
                         </configuration>
                         <configuration name='headers' type='delimited' values='many'>
-                            <value>default:Insert Date</value>
+                            <value>default:Date of Visit</value> <!--I'm guessing this is what will reflect before dates is inserted-->
                         </configuration>
-                    </configurationGroup>                    <!--End of first field: date_of_visit -->
-                    <configurationGroup name="birth_date">   <!-- The second field: birth_date -->
+                    </configurationGroup>
+                    <!--end of date of date_of_visit-->
+
+                    <!--I copied this field from somewhere -->
+                    <configurationGroup name="birth_date">
                         <displayName>The field 'birth_date'</displayName>
                         <configuration name="formfield">
                             <displayName>The form field type</displayName>
@@ -66,12 +74,15 @@
                             <version>3.2.1</version>
                             <value>default:Date of Birth</value>
                         </configuration>
-                        <configuration name="default_eval">
+                        <configuration name="default_eval"> <!--I don't know what an eval is-->
                             <displayName>The default value for this field as an eval string</displayName>
                             <value>I2CE_Date::blank()</value>
                         </configuration>
-                    </configurationGroup>                      <!--End of second field: birth_date -->
-                    <configurationGroup name="marital_status"> <!-- The third field: marital_status -->
+                    </configurationGroup>
+                    <!--end of birth_date-->
+
+                    <!--I copied this field from somewhere -->
+                    <configurationGroup name="marital_status">
                         <displayName>The field 'marital_status'</displayName>
                         <version>3.2.5</version>
                         <configuration name="formfield">
@@ -83,7 +94,9 @@
                             <version>3.2.1</version>
                             <value>default:Marital Status</value>
                         </configuration>
-                    </configurationGroup>                     <!--End of third field: marital_status -->
+                    </configurationGroup>
+                    <!--end of marital_status-->
+
                 </configurationGroup>
             </configurationGroup>
         </configurationGroup>
