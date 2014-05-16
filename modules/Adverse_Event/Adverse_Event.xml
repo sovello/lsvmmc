@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="adverse_event">
+    <metadata>
+        <displayName>Adverse Event</displayName>
+        <category>Form</category>
+        <description>This module adds several indicators specific to the Adverse Event part</description>
+        <creator>Jhpeigo Lesotho</creator>
+        <email>Moipone.Mphahlela@jhpiego.org</email>
+        <version>4.1.2</version>
+        <requirement name='Person'>
+            <atLeast version='4.1'/>
+            <lessThan version='4.2'/>
+        </requirement>
+        <path name='templates'>
+            <value>./templates</value>
+        </path>
+        <priority>300</priority>
+    </metadata>
+    <!--end of metadata -->
+    <!--start: configuring forms and fields-->
+    <configurationGroup name='adverse_event' path='/'>
+        <status>overwrite:true</status> <!-- need for development phase -->
+
+        <!-- omitting the optional functionality as I won't need to use lists as yet -->
+
+        <configurationGroup name='forms' path='/modules/forms/forms'>
+            <configurationGroup name='ae_form'>    <!-- This is the form that is intended to hold fields -->
+                <configuration name='class' values='single'>
+                    <value>I2CE_SimpleList</value>  <!-- I'm not sure about this. I don't understand this part -->
+                </configuration>
+                <configuration name='display' values='single'>
+                    <value>AE Form</value>
+                </configuration>
+            </configurationGroup>
+
+            <configurationGroup name='person'>
+                <configuration name='class'>
+                    <value>aeClass</value>     <!-- the aeClass class -->
+                </configuration>
+            </configurationGroup>
+        </configurationGroup>
+        <!--End of Form-->
+
+        <!--Classes-->
+        <configurationGroup name='formClasses' path='/modules/forms/formClasses'>
+            <configurationGroup name='aeClass'>          <!-- The VMMC class here-->
+                <configuration name='extends'>        <!-- extends -->
+                    <value>iHRIS_ManagePerson</value> <!-- the class iHRIS_ManagePerson -->
+                </configuration>
+
+                <configurationGroup name='fields'>
+                    <!--Any AE -->
+                    <configurationGroup name="any_ad_ev">
+                        <displayName>The field 'any_ad_ev'</displayName>
+                        <version>3.2.5</version>
+                        <configuration name="formfield">
+                            <displayName>The form field type</displayName>
+                            <value>BOOLEAN</value>
+                        </configuration>
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.1</version>
+                            <value>default:Adverse Event</value>
+                        </configuration>
+                    </configurationGroup>
+                    <!--Any AE-->
+
+                    <!--Pain-->
+                    <configurationGroup name="ae_pain">
+                        <displayName>The field 'ae_pain'</displayName>
+                        <configuration name="formfield">
+                            <displayName>The form field type</displayName>
+                            <value>MAP</value>
+                        </configuration>
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.4</version>
+                            <value>default:Pain</value>
+                        </configuration>
+                    </configurationGroup>
+                    <!--Pain-->
+
+                    <!--Anesthetic Related Event-->
+                    <configurationGroup name="ae_ar_event">
+                        <displayName>The field 'ae_ar_event'</displayName>
+                        <configuration name="formfield">
+                            <displayName>The form field type</displayName>
+                            <value>MAP</value>
+                        </configuration>
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.4</version>
+                            <value>default:Anesthetic Related Event</value>
+                        </configuration>
+                    </configurationGroup>
+                    <!--Anesthetic Related Event-->
+
+                    <!--Excessive Bleeding-->
+                    <configurationGroup name="ae_ex_bleeding">
+                        <displayName>The field 'ae_ex_bleeding'</displayName>
+                        <configuration name="formfield">
+                            <displayName>The form field type</displayName>
+                            <value>MAP</value>
+                        </configuration>
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.4</version>
+                            <value>default:Excessive Bleeding</value>
+                        </configuration>
+                    </configurationGroup>
+                    <!--Excessive Bleeding-->
+
+                    <!--Excessive Skin Removed-->
+                    <configurationGroup name="ae_ex_skin_rem">
+                        <displayName>The field 'ae_ex_skin_rem'</displayName>
+                        <configuration name="formfield">
+                            <displayName>The form field type</displayName>
+                            <value>MAP</value>
+                        </configuration>
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.4</version>
+                            <value>default:Excessive Skin Removed</value>
+                        </configuration>
+                    </configurationGroup>
+                    <!--Excessive Skin Removed-->
+
+                    <!--Damage To Penis-->
+                    <configurationGroup name="ae_damage_penis">
+                        <displayName>The field 'ae_damage_penis'</displayName>
+                        <configuration name="formfield">
+                            <displayName>The form field type</displayName>
+                            <value>MAP</value>
+                        </configuration>
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.4</version>
+                            <value>default:Damage To Penis</value>
+                        </configuration>
+                    </configurationGroup>
+                    <!--Pain-->
+
+                </configurationGroup>
+            </configurationGroup>
+        </configurationGroup>
+    </configurationGroup>
+    <!--End of Class-->
+</I2CEConfiguration>

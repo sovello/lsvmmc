@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
-<I2CEConfiguration name="vmmc_fun">
+<I2CEConfiguration name="mc_reduction">
     <metadata>
-        <displayName>Personal Details</displayName>
+        <displayName>MC Risk and Reduction</displayName>
         <category>Form</category>
-        <description>This module adds several indicators specific to personal details of the patient</description>
+        <description>This module adds several indicators specific to the MC and Risk Reduction part</description>
         <creator>Jhpeigo Lesotho</creator>
         <email>Moipone.Mphahlela@jhpiego.org</email>
         <version>4.1.1</version>
@@ -19,25 +19,25 @@
     </metadata>
     <!--end of metadata -->
     <!--start: configuring forms and fields-->
-    <configurationGroup name='vmmc_fun' path='/'>
+    <configurationGroup name='mc_reduction' path='/'>
         <status>overwrite:true</status> <!-- need for development phase -->
 
         <!-- omitting the optional functionality as I won't need to use lists as yet -->
 
         <!-- Form: the vmmc_form that will use VMMC class -->
         <configurationGroup name='forms' path='/modules/forms/forms'>
-            <configurationGroup name='vmmc_form'>    <!-- This is the form that is intended to hold fields -->
+            <configurationGroup name='mc_reduction_form'>    <!-- This is the form that is intended to hold fields -->
                 <configuration name='class' values='single'>
                     <value>I2CE_SimpleList</value>  <!-- I'm not sure about this. I don't understand this part -->
                 </configuration>
                 <configuration name='display' values='single'>
-                    <value>VMMC Form</value>
+                    <value>MC Reduction Form</value>
                 </configuration>
             </configurationGroup>
 
             <configurationGroup name='person'>
                 <configuration name='class'>
-                    <value>VMMC</value>     <!-- the VMMC class -->
+                    <value>mcReduction</value>     <!-- the MCR class -->
                 </configuration>
             </configurationGroup>
         </configurationGroup>
@@ -45,26 +45,46 @@
 
         <!--Classes-->
         <configurationGroup name='formClasses' path='/modules/forms/formClasses'>
-            <configurationGroup name='VMMC'>          <!-- The VMMC class here-->
+            <configurationGroup name='mcReduction'>          <!-- The VMMC class here-->
                 <configuration name='extends'>        <!-- extends -->
                     <value>iHRIS_ManagePerson</value> <!-- the class iHRIS_ManagePerson -->
                 </configuration>
                 <configurationGroup name='fields'>
 
-                    <configurationGroup name='date_of_visit'>
-                        <configuration name='formfield'>
+                    <!--Client Tested -->
+                    <configurationGroup name="client_tested">
+                        <displayName>The field 'marital_status'</displayName>
+                        <version>3.2.5</version>
+                        <configuration name="formfield">
                             <displayName>The form field type</displayName>
-                            <value>DATE_YMD</value>
+                            <value>BOOLEAN</value>
                         </configuration>
-                        <configuration name='headers' type='delimited' values='many'>
-                            <value>default:Date of Visit</value> <!--I'm guessing this is what will reflect before dates is inserted-->
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.1</version>
+                            <value>default:Client Tested?</value>
                         </configuration>
                     </configurationGroup>
-                    <!--end of date of date_of_visit-->
+                    <!--Client Tested-->
 
-                    <!--I copied this field from somewhere -->
-                    <configurationGroup name="birth_date">
-                        <displayName>The field 'birth_date'</displayName>
+                    <!--Where?-->
+                    <configurationGroup name="tested_where">
+                        <displayName>The field 'tested_where'</displayName>
+                        <configuration name="formfield">
+                            <displayName>The form field type</displayName>
+                            <value>STRING_TEXT</value>
+                        </configuration>
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.4</version>
+                            <value>default:Where</value>
+                        </configuration>
+                    </configurationGroup>
+                    <!--Where?-->
+
+                    <!--Date of HIV Testing-->
+                    <configurationGroup name="date_of_hiv_testing">
+                        <displayName>The field 'date_of_hiv_testing'</displayName>
                         <configuration name="formfield">
                             <displayName>The form field type</displayName>
                             <value>DATE_YMD</value>
@@ -72,30 +92,45 @@
                         <configuration name="headers" type="delimited" locale="en_US">
                             <displayName>The headers for this field.</displayName>
                             <version>3.2.1</version>
-                            <value>default:Date of Birth</value>
+                            <value>default:Date of HIV Testing</value>
                         </configuration>
                         <configuration name="default_eval"> <!--I don't know what an eval is-->
                             <displayName>The default value for this field as an eval string</displayName>
                             <value>I2CE_Date::blank()</value>
                         </configuration>
                     </configurationGroup>
-                    <!--end of birth_date-->
+                    <!--Date of HIV Testing-->
 
-                    <!--I copied this field from somewhere -->
-                    <configurationGroup name="marital_status">
-                        <displayName>The field 'marital_status'</displayName>
-                        <version>3.2.5</version>
+                    <!--Test Results-->
+                    <configurationGroup name="test_results">
+                        <displayName>The field 'test_results'</displayName>
                         <configuration name="formfield">
                             <displayName>The form field type</displayName>
                             <value>MAP</value>
                         </configuration>
                         <configuration name="headers" type="delimited" locale="en_US">
                             <displayName>The headers for this field.</displayName>
-                            <version>3.2.1</version>
-                            <value>default:Marital Status</value>
+                            <version>3.2.4</version>
+                            <value>default:Test Results</value>
                         </configuration>
                     </configurationGroup>
-                    <!--end of marital_status-->
+                    <!--Where?-->
+
+                    <!--Client declined -->
+                    <configurationGroup name="client_declined">
+                        <displayName>The field 'client_declined'</displayName>
+                        <version>3.2.5</version>
+                        <configuration name="formfield">
+                            <displayName>The form field type</displayName>
+                            <value>BOOLEAN</value>
+                        </configuration>
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.1</version>
+                            <value>default:Client Declined?</value>
+                        </configuration>
+                    </configurationGroup>
+                    <!--Client Tested-->
 
                 </configurationGroup>
             </configurationGroup>

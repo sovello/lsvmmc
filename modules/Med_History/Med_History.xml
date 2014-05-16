@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
-<I2CEConfiguration name="vmmc_fun">
+<I2CEConfiguration name="med_history">
     <metadata>
-        <displayName>Personal Details</displayName>
+        <displayName>Medical History</displayName>
         <category>Form</category>
-        <description>This module adds several indicators specific to personal details of the patient</description>
+        <description>This module adds several indicators specific to for the Medical History indicators</description>
         <creator>Jhpeigo Lesotho</creator>
         <email>Moipone.Mphahlela@jhpiego.org</email>
-        <version>4.1.1</version>
+        <version>4.1.2</version>
         <requirement name='Person'>
             <atLeast version='4.1'/>
             <lessThan version='4.2'/>
@@ -19,25 +19,25 @@
     </metadata>
     <!--end of metadata -->
     <!--start: configuring forms and fields-->
-    <configurationGroup name='vmmc_fun' path='/'>
+    <configurationGroup name='med_history' path='/'>
         <status>overwrite:true</status> <!-- need for development phase -->
 
         <!-- omitting the optional functionality as I won't need to use lists as yet -->
 
         <!-- Form: the vmmc_form that will use VMMC class -->
         <configurationGroup name='forms' path='/modules/forms/forms'>
-            <configurationGroup name='vmmc_form'>    <!-- This is the form that is intended to hold fields -->
+            <configurationGroup name='medhis_form'>    <!-- This is the form that is intended to hold fields -->
                 <configuration name='class' values='single'>
                     <value>I2CE_SimpleList</value>  <!-- I'm not sure about this. I don't understand this part -->
                 </configuration>
                 <configuration name='display' values='single'>
-                    <value>VMMC Form</value>
+                    <value>Medical History Form</value>
                 </configuration>
             </configurationGroup>
 
             <configurationGroup name='person'>
                 <configuration name='class'>
-                    <value>VMMC</value>     <!-- the VMMC class -->
+                    <value>medHistory</value>     <!-- the medHistory class -->
                 </configuration>
             </configurationGroup>
         </configurationGroup>
@@ -45,57 +45,58 @@
 
         <!--Classes-->
         <configurationGroup name='formClasses' path='/modules/forms/formClasses'>
-            <configurationGroup name='VMMC'>          <!-- The VMMC class here-->
+            <configurationGroup name='medHistory'>          <!-- The medHistory class here-->
                 <configuration name='extends'>        <!-- extends -->
                     <value>iHRIS_ManagePerson</value> <!-- the class iHRIS_ManagePerson -->
                 </configuration>
                 <configurationGroup name='fields'>
 
-                    <configurationGroup name='date_of_visit'>
-                        <configuration name='formfield'>
-                            <displayName>The form field type</displayName>
-                            <value>DATE_YMD</value>
-                        </configuration>
-                        <configuration name='headers' type='delimited' values='many'>
-                            <value>default:Date of Visit</value> <!--I'm guessing this is what will reflect before dates is inserted-->
-                        </configuration>
-                    </configurationGroup>
-                    <!--end of date of date_of_visit-->
-
-                    <!--I copied this field from somewhere -->
-                    <configurationGroup name="birth_date">
-                        <displayName>The field 'birth_date'</displayName>
-                        <configuration name="formfield">
-                            <displayName>The form field type</displayName>
-                            <value>DATE_YMD</value>
-                        </configuration>
-                        <configuration name="headers" type="delimited" locale="en_US">
-                            <displayName>The headers for this field.</displayName>
-                            <version>3.2.1</version>
-                            <value>default:Date of Birth</value>
-                        </configuration>
-                        <configuration name="default_eval"> <!--I don't know what an eval is-->
-                            <displayName>The default value for this field as an eval string</displayName>
-                            <value>I2CE_Date::blank()</value>
-                        </configuration>
-                    </configurationGroup>
-                    <!--end of birth_date-->
-
-                    <!--I copied this field from somewhere -->
-                    <configurationGroup name="marital_status">
-                        <displayName>The field 'marital_status'</displayName>
+                    <!--Client Circumcised -->
+                    <configurationGroup name="client_circumcised">
+                        <displayName>The field 'client_circumcised'</displayName>
                         <version>3.2.5</version>
                         <configuration name="formfield">
                             <displayName>The form field type</displayName>
-                            <value>MAP</value>
+                            <value>BOOLEAN</value>
                         </configuration>
                         <configuration name="headers" type="delimited" locale="en_US">
                             <displayName>The headers for this field.</displayName>
                             <version>3.2.1</version>
-                            <value>default:Marital Status</value>
+                            <value>default:Client Circumcised</value>
                         </configuration>
                     </configurationGroup>
-                    <!--end of marital_status-->
+                    <!--Client Circumcised-->
+
+                    <!--Circumcised Where?-->
+                    <configurationGroup name="circumcised_where">
+                        <displayName>The field 'circumcised_where'</displayName>
+                        <configuration name="formfield">
+                            <displayName>The form field type</displayName>
+                            <value>STRING_TEXT</value>
+                        </configuration>
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.4</version>
+                            <value>default:Circumcised Where</value>
+                        </configuration>
+                    </configurationGroup>
+                    <!--Circumcised Where?-->
+
+                    <!--Any STIs -->
+                    <configurationGroup name="any_sti">
+                        <displayName>The field 'any_sti'</displayName>
+                        <version>3.2.5</version>
+                        <configuration name="formfield">
+                            <displayName>The form field type</displayName>
+                            <value>BOOLEAN</value>
+                        </configuration>
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.1</version>
+                            <value>default:Any STIs</value>
+                        </configuration>
+                    </configurationGroup>
+                    <!--Client Circumcised-->
 
                 </configurationGroup>
             </configurationGroup>

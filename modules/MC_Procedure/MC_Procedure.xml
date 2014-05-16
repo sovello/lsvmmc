@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
-<I2CEConfiguration name="vmmc_fun">
+<I2CEConfiguration name="mc_procedure">
     <metadata>
-        <displayName>Personal Details</displayName>
+        <displayName>MC Procedure</displayName>
         <category>Form</category>
-        <description>This module adds several indicators specific to personal details of the patient</description>
+        <description>This module adds several indicators specific to the MC Procedure part</description>
         <creator>Jhpeigo Lesotho</creator>
         <email>Moipone.Mphahlela@jhpiego.org</email>
-        <version>4.1.1</version>
+        <version>4.1.0</version>
         <requirement name='Person'>
             <atLeast version='4.1'/>
             <lessThan version='4.2'/>
@@ -19,25 +19,24 @@
     </metadata>
     <!--end of metadata -->
     <!--start: configuring forms and fields-->
-    <configurationGroup name='vmmc_fun' path='/'>
+    <configurationGroup name='mc_procedure' path='/'>
         <status>overwrite:true</status> <!-- need for development phase -->
 
         <!-- omitting the optional functionality as I won't need to use lists as yet -->
 
-        <!-- Form: the vmmc_form that will use VMMC class -->
         <configurationGroup name='forms' path='/modules/forms/forms'>
-            <configurationGroup name='vmmc_form'>    <!-- This is the form that is intended to hold fields -->
+            <configurationGroup name='mc_procedure_form'>    <!-- This is the form that is intended to hold fields -->
                 <configuration name='class' values='single'>
                     <value>I2CE_SimpleList</value>  <!-- I'm not sure about this. I don't understand this part -->
                 </configuration>
                 <configuration name='display' values='single'>
-                    <value>VMMC Form</value>
+                    <value>MC Procedure Form</value>
                 </configuration>
             </configurationGroup>
 
             <configurationGroup name='person'>
                 <configuration name='class'>
-                    <value>VMMC</value>     <!-- the VMMC class -->
+                    <value>mcProcedure</value>     <!-- the mcProcedure class -->
                 </configuration>
             </configurationGroup>
         </configurationGroup>
@@ -45,57 +44,61 @@
 
         <!--Classes-->
         <configurationGroup name='formClasses' path='/modules/forms/formClasses'>
-            <configurationGroup name='VMMC'>          <!-- The VMMC class here-->
+            <configurationGroup name='mcProcedure'>          <!-- The VMMC class here-->
                 <configuration name='extends'>        <!-- extends -->
                     <value>iHRIS_ManagePerson</value> <!-- the class iHRIS_ManagePerson -->
                 </configuration>
                 <configurationGroup name='fields'>
 
-                    <configurationGroup name='date_of_visit'>
-                        <configuration name='formfield'>
-                            <displayName>The form field type</displayName>
-                            <value>DATE_YMD</value>
-                        </configuration>
-                        <configuration name='headers' type='delimited' values='many'>
-                            <value>default:Date of Visit</value> <!--I'm guessing this is what will reflect before dates is inserted-->
-                        </configuration>
-                    </configurationGroup>
-                    <!--end of date of date_of_visit-->
-
-                    <!--I copied this field from somewhere -->
-                    <configurationGroup name="birth_date">
-                        <displayName>The field 'birth_date'</displayName>
+                    <!--Client Cleared -->
+                    <configurationGroup name="client_cleared">
+                        <displayName>The field 'marital_cleared'</displayName>
+                        <version>3.2.5</version>
                         <configuration name="formfield">
                             <displayName>The form field type</displayName>
-                            <value>DATE_YMD</value>
+                            <value>BOOLEAN</value>
                         </configuration>
                         <configuration name="headers" type="delimited" locale="en_US">
                             <displayName>The headers for this field.</displayName>
                             <version>3.2.1</version>
-                            <value>default:Date of Birth</value>
-                        </configuration>
-                        <configuration name="default_eval"> <!--I don't know what an eval is-->
-                            <displayName>The default value for this field as an eval string</displayName>
-                            <value>I2CE_Date::blank()</value>
+                            <value>default:Client Cleared?</value>
                         </configuration>
                     </configurationGroup>
-                    <!--end of birth_date-->
+                    <!--Client Cleared-->
 
-                    <!--I copied this field from somewhere -->
-                    <configurationGroup name="marital_status">
-                        <displayName>The field 'marital_status'</displayName>
-                        <version>3.2.5</version>
+                    <!--Client Referred-->
+                    <configurationGroup name="client_referred">
+                        <displayName>The field 'client_referred'</displayName>
                         <configuration name="formfield">
                             <displayName>The form field type</displayName>
                             <value>MAP</value>
                         </configuration>
                         <configuration name="headers" type="delimited" locale="en_US">
                             <displayName>The headers for this field.</displayName>
-                            <version>3.2.1</version>
-                            <value>default:Marital Status</value>
+                            <version>3.2.4</version>
+                            <value>default:Client Referred To</value>
                         </configuration>
                     </configurationGroup>
-                    <!--end of marital_status-->
+                    <!--Client Referred-->
+
+                    <!--Date of HIV Testing-->
+                    <configurationGroup name="date_of_mc_procedure">
+                        <displayName>The field 'date_of_mc_procedure'</displayName>
+                        <configuration name="formfield">
+                            <displayName>The form field type</displayName>
+                            <value>DATE_YMD</value>
+                        </configuration>
+                        <configuration name="headers" type="delimited" locale="en_US">
+                            <displayName>The headers for this field.</displayName>
+                            <version>3.2.1</version>
+                            <value>default:Date of MC Procedure</value>
+                        </configuration>
+                        <configuration name="default_eval"> <!--I don't know what an eval is-->
+                            <displayName>The default value for this field as an eval string</displayName>
+                            <value>I2CE_Date::blank()</value>
+                        </configuration>
+                    </configurationGroup>
+                    <!--Date of HIV Testing-->
 
                 </configurationGroup>
             </configurationGroup>
