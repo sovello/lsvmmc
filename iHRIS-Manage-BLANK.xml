@@ -8,7 +8,7 @@
     <creator>Intrahealth Informatics</creator>
     <email>hris@capacityproject.org</email>
     <link>https://launchpad.net/ihris-manage</link>
-    <version>4.1.1.3</version>
+    <version>4.1.1.9</version>
     <path name="configs">
       <value>./configs</value>
     </path>
@@ -19,30 +19,6 @@
     <requirement name="UserAccess">
       <atLeast version="4.1" />
       <lessThan version="4.2" />
-    </requirement>
-    <requirement name="vmmc_fun">
-     <atLeast version='4.1' />
-     <lessThan version='4.2' />
-    </requirement>
-    <requirement name="mc_procedure">
-     <atLeast version='4.1' />
-     <lessThan version='4.2' />
-    </requirement>
-    <requirement name="mc_reduction">
-     <atLeast version='4.1' />
-     <lessThan version='4.2' />
-    </requirement>
-    <requirement name="adverse_event">
-     <atLeast version='4.1' />
-     <lessThan version='4.2' />
-    </requirement>
-    <requirement name="med_history">
-     <atLeast version='4.1' />
-     <lessThan version='4.2' />
-    </requirement>
-    <requirement name="phys_exam">
-     <atLeast version='4.1' />
-     <lessThan version='4.2' />
     </requirement>
     <enable name="default-locales" />
     <enable name="PersonContact" />
@@ -55,6 +31,7 @@
     <enable name="messageBox" />
     <enable name="messageNotice" />
     <enable name="messageHandler" />
+    <enable name="McRisk"/>
 
     <path name="classes">
       <value>./lib</value>
