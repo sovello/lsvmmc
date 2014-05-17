@@ -1,4 +1,4 @@
 Voluntary Medical Male Circumcision
 ====
 
-The stupid overnight VMMC database
+The stupid overnight vmmc database

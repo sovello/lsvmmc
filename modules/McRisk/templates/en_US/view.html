@@ -10,12 +10,12 @@
     <p class="editRecordsData" id="individual_links">
       <a href="" class="hide" title="Hide" onclick="return hideDiv('individual', this );">Hide</a>
      <span task="person_can_edit_child_form_demographic" type="form" name="person:id" href="demographic?parent=" ifset="!demographic:id">Add Demographic Information</span>
-        <!-- New professional development section for the Professional Development module -->
-      <span type='module' name='McRisk' ifenabled='true'>
+        !-- New professional development section for the Professional Development module -->
+    <span type='module' name='ProfDevelopment' ifenabled='true'>
       <span task="person_can_edit_child_form_person_continuous_mcrisk" type="form" name="person:id" href="person_continuous_mcrisk?parent=" ifset="!person_continuous_mcrisk:id">Add Continuous Professional Development</span>
-      </span>
+    </span>
         <!-- End of Professional Development additions -->
-      <span type='module' name='PersonPassportPhoto' ifenabled='true'>
+        <span type='module' name='PersonPassportPhoto' ifenabled='true'>
         <span task="person_can_edit_child_form_person_photo_passport" type="form" name="person:id" href="person_photo_passport?parent=">Add Passport Photo</span>
       </span>
       <span type='module' name='PersonResume' ifenabled='true'>
@@ -49,15 +49,12 @@
       <div class="dataTable">
         <table border="0" cellspacing="0" cellpadding="0">
           <tr>
-            <th colspan="2">Patient Details</th>
+            <th colspan="2">Name / Nationality</th>
           </tr>
           <span type="form" name="person:surname" showhead="default"></span>
           <span type="form" name="person:firstname" showhead="default" class="even"></span>
           <span type="form" name="person:othername" showhead="default"></span>
           <span type="form" name="person:nationality" showhead="default" class="even"></span>
-          <span type="form" name="person:birth_date" showhead="default"  ></span>
-          <span type="form" name="person:marital_status" showhead="default" ></span>
-          <span type="form" name="person:date_of_visit" showhead="default"  ></span>
           <span type="form" name="person:residence" showhead="location" mline="true">
           </span>
         </table>
@@ -70,7 +67,8 @@
     </div> <!--end indiviudal-->
     <br style="clear: both;" />
   </div> <!--end records data-->
-
+  
+  
   <span type='module' name='PersonContact' ifenabled='true'>
     <div class="recordsData" task='person_can_view_child_form_person_contact_work|person_can_view_child_form_person_contact_personal|person_can_view_child_form_person_contact_emergency|person_can_view_child_form_person_contact_other'>
       <h3>
@@ -196,17 +194,18 @@
   <!-- New professional development section for the Professional Development module -->
   <span type="module" name="McRisk" ifenabled="true">
   <div class="recordsData">
-      <h3><a name="jump_mcrisk">MC and Risk Reduction</a></h3>
+      <h3><a name="jump_mcrisk">Professional Development</a></h3>
       <p class="editRecordsData" id="mcrisk_links"><a href="" class="hide" title="Hide" onclick="return hideDiv('mcrisk', this );">Hide</a>
-          <span task='person_can_edit_child_form_person_mcrisk' type="form" name="person:id" href="person_mcrisk?parent=">Add Data on MC and Risk Reduction</span>
+          <span task='person_can_edit_child_form_person_mcrisk' type="form" name="person:id" href="person_mcrisk?parent=">Add Professional Development</span>
       </p>
 
       <div id="person_mcrisk"></div>
+      <div id="person_continuous_mcrisk"></div>
       <br style="clear: both;" />
   </div> <!--  recordsData -->
   </span>
   <!-- End of Professional Development additions -->
-
+  
   <span type='module' name='training-course' ifenabled='true'>
     <div class="recordsData" task='person_can_view_child_form_person_scheduled_training_course'>
       <h3>

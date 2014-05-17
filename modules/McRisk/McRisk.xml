@@ -5,8 +5,8 @@
         <displayName>MC and Risk</displayName>
         <className>iHRIS_Module_McRisk</className>
         <category>Site</category>
-        <description>Adds in indicators for MC and Risk Reduction</description>
-        <version>4.1.6</version>
+        <description>Adds in two new forms for tracking professional development</description>
+        <version>4.1.5</version>
         <path name='classes'>
             <value>./lib</value>
         </path>
@@ -17,7 +17,7 @@
     </metadata>
 
     <configurationGroup name='McRisk' path='/I2CE'>
-        <displayName>MC and Risk</displayName>
+        <displayName>Professional Development</displayName>
 
         <configurationGroup name='tasks' path='/I2CE/tasks/task_description' locale='en_US'>
             <configuration name='person_can_view_child_form_person_mcrisk'>
@@ -25,6 +25,12 @@
             </configuration>
             <configuration name='person_can_edit_child_form_person_mcrisk'>
                 <value>Can edit person_mcrisk child forms of a person</value>
+            </configuration>
+            <configuration name='person_can_view_child_form_person_continuous_mcrisk'>
+                <value>Can view person_continuous_mcrisk child form of a person</value>
+            </configuration>
+            <configuration name='person_can_edit_child_form_person_continuous_mcrisk'>
+                <value>Can edit person_continuous_mcrisk child forms of a person</value>
             </configuration>
         </configurationGroup>
 
@@ -36,11 +42,20 @@
                 <value>person_can_view_child_form_person_mcrisk</value>
                 <value>person_can_view</value>
             </configuration>
+            <configuration name='person_can_view_child_form_person_continuous_mcrisk' values='many'>
+                <value>person_can_view</value>
+            </configuration>
+            <configuration name='person_can_edit_child_form_person_continuous_mcrisk' values='many'>
+                <value>person_can_view_child_form_person_continuous_mcrisk</value>
+                <value>person_can_view</value>
+            </configuration>
             <configuration name='person_can_view_child_forms' values='many'>
                 <value>person_can_view_child_form_person_mcrisk</value>
+                <value>person_can_view_child_form_person_continuous_mcrisk</value>
             </configuration>
             <configuration name='person_can_edit_child_forms' values='many'>
                 <value>person_can_edit_child_form_person_mcrisk</value>
+                <value>person_can_edit_child_form_person_continuous_mcrisk</value>
             </configuration>
         </configurationGroup>
 
@@ -54,7 +69,7 @@
                 <status>advanced:true</status>
                 <status>required:true</status>
 
-                <!-- This section is to add a new form called person_profdev with the associated
+                <!-- This section is to add a new form called person_mcrisk with the associated
                      class.  The class will be defined in the classes section below. -->
                 <configurationGroup name='person_mcrisk'>
                     <displayName>Person MC and Risk</displayName>
@@ -69,7 +84,25 @@
                         <description>The display name for this form</description>
                         <value>Person MC and Risk</value>
                     </configuration>
-                </configurationGroup> <!-- person_profdev -->
+                </configurationGroup> <!-- person_mcrisk -->
+
+                <!-- This section is to add a new form called person_continuous_profdev with the associated
+                     class.  The class will be defined in the classes section below. -->
+                <configurationGroup name='person_continuous_mcrisk'>
+                    <displayName>Person Continuous MC and Risk</displayName>
+                    <description>The Person Continuous MC and Risk Form</description>
+                    <configuration name='class' values='single'>
+                        <displayName>Class Name</displayName>
+                        <description>The name of the class providing the form</description>
+                        <value>iHRIS_PersonContinuousMcRisk</value>
+                    </configuration>
+                    <configuration name='display' values='single'>
+                        <displayName>Display name</displayName>
+                        <description>The display name for this form</description>
+                        <value>Person Continuous MC and Risk</value>
+                    </configuration>
+                </configurationGroup> <!-- person_continuous_mcrisk -->
+
 
                 <!-- This section will modify the existing information for the person form to include
                      two new child forms which are the new forms created for this module. -->
@@ -78,7 +111,8 @@
                     <configuration name='child_forms' values='many' >
                         <status>uniquemerge:true</status>
                         <displayName>Child Forms</displayName>
-                        <value>person_mcrisk</value>
+                        <value>person_profdev</value>
+                        <value>person_continuous_mcrisk</value>
                     </configuration>
                 </configurationGroup> <!-- person_meta -->
 
@@ -89,7 +123,7 @@
                 <displayName>Form Class Configuration</displayName>
 
 
-                <!-- This section will define the person_profdev form class with all the fields and field types.
+                <!-- This section will define the person_mcrisk form class with all the fields and field types.
                      This class will be created dynamically since no extra funcationality needs to be added for it. -->
                 <configurationGroup name="iHRIS_PersonMcRisk">
                     <displayName>Configuration for the class 'iHRIS_PersonMcRisk'</displayName>
@@ -99,89 +133,141 @@
                     </configuration>
                     <configurationGroup name="fields">
                         <displayName>The fields defined for this form.</displayName>
-                        <!--Client Tested -->
-                        <configurationGroup name="client_tested">
-                            <displayName>The field 'marital_status'</displayName>
-                            <version>3.2.5</version>
-                            <configuration name="formfield">
-                                <displayName>The form field type</displayName>
-                                <value>BOOLEAN</value>
-                            </configuration>
-                            <configuration name="headers" type="delimited" locale="en_US">
-                                <displayName>The headers for this field.</displayName>
-                                <version>3.2.1</version>
-                                <value>default:Client Tested?</value>
-                            </configuration>
-                        </configurationGroup>
-                        <!--Client Tested-->
 
-                        <!--Where?-->
-                        <configurationGroup name="tested_where">
-                            <displayName>The field 'tested_where'</displayName>
+                        <configurationGroup name="year">
+                            <displayName>The fields 'year'</displayName>
                             <configuration name="formfield">
                                 <displayName>The form field type</displayName>
-                                <value>STRING_TEXT</value>
+                                <value>DATE_Y</value>
                             </configuration>
-                            <configuration name="headers" type="delimited" locale="en_US">
+                            <configuration name="headers" type="delimited">
                                 <displayName>The headers for this field.</displayName>
-                                <version>3.2.4</version>
-                                <value>default:Where</value>
+                                <value>default:Year</value>
                             </configuration>
-                        </configurationGroup>
-                        <!--Where?-->
+                            <configuration name="default_eval">
+                                <displayName>The default value for this field as an eval() string</displayName>
+                                <value>I2CE_Date::now()</value>
+                            </configuration>
+                        </configurationGroup> <!-- year -->
+                        <configurationGroup name="course">
+                            <displayName>The fields 'course'</displayName>
+                            <configuration name="formfield">
+                                <displayName>The form field type</displayName>
+                                <value>STRING_LINE</value>
+                            </configuration>
+                            <configuration name="headers" type="delimited">
+                                <displayName>The headers for this field.</displayName>
+                                <value>default:Course</value>
+                            </configuration>
+                        </configurationGroup> <!-- course -->
+                        <configurationGroup name="duration">
+                            <displayName>The fields 'duration'</displayName>
+                            <configuration name="formfield">
+                                <displayName>The form field type</displayName>
+                                <value>INT</value>
+                            </configuration>
+                            <configuration name="headers" type="delimited">
+                                <displayName>The headers for this field.</displayName>
+                                <value>default:Duration (in Days)</value>
+                            </configuration>
+                        </configurationGroup> <!-- duration -->
+                        <configurationGroup name="certification">
+                            <displayName>The fields 'certification'</displayName>
+                            <configuration name="formfield">
+                                <displayName>The form field type</displayName>
+                                <value>STRING_LINE</value>
+                            </configuration>
+                            <configuration name="headers" type="delimited">
+                                <displayName>The headers for this field.</displayName>
+                                <value>default:Certification</value>
+                            </configuration>
+                        </configurationGroup> <!-- certification -->
 
-                        <!--Date of HIV Testing-->
-                        <configurationGroup name="date_of_hiv_testing">
-                            <displayName>The field 'date_of_hiv_testing'</displayName>
-                            <configuration name="formfield">
-                                <displayName>The form field type</displayName>
-                                <value>DATE_YMD</value>
-                            </configuration>
-                            <configuration name="headers" type="delimited" locale="en_US">
-                                <displayName>The headers for this field.</displayName>
-                                <version>3.2.1</version>
-                                <value>default:Date of HIV Testing</value>
-                            </configuration>
-                            <configuration name="default_eval"> <!--I don't know what an eval is-->
-                                <displayName>The default value for this field as an eval string</displayName>
-                                <value>I2CE_Date::blank()</value>
-                            </configuration>
-                        </configurationGroup>
-                        <!--Date of HIV Testing-->
-
-                        <!--Test Results-->
-                        <configurationGroup name="test_results">
-                            <displayName>The field 'test_results'</displayName>
-                            <configuration name="formfield">
-                                <displayName>The form field type</displayName>
-                                <value>MAP</value>
-                            </configuration>
-                            <configuration name="headers" type="delimited" locale="en_US">
-                                <displayName>The headers for this field.</displayName>
-                                <version>3.2.4</version>
-                                <value>default:Test Results</value>
-                            </configuration>
-                        </configurationGroup>
-                        <!--Where?-->
-
-                        <!--Client declined -->
-                        <configurationGroup name="client_declined">
-                            <displayName>The field 'client_declined'</displayName>
-                            <version>3.2.5</version>
-                            <configuration name="formfield">
-                                <displayName>The form field type</displayName>
-                                <value>BOOLEAN</value>
-                            </configuration>
-                            <configuration name="headers" type="delimited" locale="en_US">
-                                <displayName>The headers for this field.</displayName>
-                                <version>3.2.1</version>
-                                <value>default:Client Declined?</value>
-                            </configuration>
-                        </configurationGroup>
-                        <!--Client Tested-->
                     </configurationGroup> <!-- fields -->
-                </configurationGroup> <!-- iHRIS_PersonProfDevelopment -->
+                </configurationGroup> <!-- iHRIS_PersonMcRisk -->
 
+                <!-- This section will define the person_continuous_mcrisk form class with all the
+                     fields and field types.
+                     This class will be created dynamically since no extra funcationality needs to be added for it. -->
+                <configurationGroup name="iHRIS_PersonContinuousMcRisk">
+                    <displayName>Configuration for the class 'iHRIS_PersonContinuousMcRisk'</displayName>
+                    <configuration name="extends">
+                        <displayName>The class this form extends</displayName>
+                        <value>I2CE_Form</value>
+                    </configuration>
+                    <configurationGroup name="fields">
+                        <displayName>The fields defined for this form.</displayName>
+
+                        <configurationGroup name="work_training_1">
+                            <displayName>The fields 'work_training_1'</displayName>
+                            <configuration name="formfield">
+                                <displayName>The form field type</displayName>
+                                <value>STRING_LINE</value>
+                            </configuration>
+                            <configuration name="headers" type="delimited">
+                                <displayName>The headers for this field.</displayName>
+                                <value>default:Training Priority 1</value>
+                            </configuration>
+                        </configurationGroup> <!-- work_training_1 -->
+                        <configurationGroup name="work_training_2">
+                            <displayName>The fields 'work_training_2'</displayName>
+                            <configuration name="formfield">
+                                <displayName>The form field type</displayName>
+                                <value>STRING_LINE</value>
+                            </configuration>
+                            <configuration name="headers" type="delimited">
+                                <displayName>The headers for this field.</displayName>
+                                <value>default:Training Priority 2</value>
+                            </configuration>
+                        </configurationGroup> <!-- work_training_2 -->
+                        <configurationGroup name="work_training_3">
+                            <displayName>The fields 'work_training_3'</displayName>
+                            <configuration name="formfield">
+                                <displayName>The form field type</displayName>
+                                <value>STRING_LINE</value>
+                            </configuration>
+                            <configuration name="headers" type="delimited">
+                                <displayName>The headers for this field.</displayName>
+                                <value>default:Training Priority 3</value>
+                            </configuration>
+                        </configurationGroup> <!-- work_training_3 -->
+
+                        <configurationGroup name="personal_training_1">
+                            <displayName>The fields 'personal_training_1'</displayName>
+                            <configuration name="formfield">
+                                <displayName>The form field type</displayName>
+                                <value>STRING_LINE</value>
+                            </configuration>
+                            <configuration name="headers" type="delimited">
+                                <displayName>The headers for this field.</displayName>
+                                <value>default:Priority 1</value>
+                            </configuration>
+                        </configurationGroup> <!-- personal_training_1 -->
+                        <configurationGroup name="personal_training_2">
+                            <displayName>The fields 'personal_training_2'</displayName>
+                            <configuration name="formfield">
+                                <displayName>The form field type</displayName>
+                                <value>STRING_LINE</value>
+                            </configuration>
+                            <configuration name="headers" type="delimited">
+                                <displayName>The headers for this field.</displayName>
+                                <value>default:Priority 2</value>
+                            </configuration>
+                        </configurationGroup> <!-- personal_training_2 -->
+                        <configurationGroup name="personal_training_3">
+                            <displayName>The fields 'personal_training_3'</displayName>
+                            <configuration name="formfield">
+                                <displayName>The form field type</displayName>
+                                <value>STRING_LINE</value>
+                            </configuration>
+                            <configuration name="headers" type="delimited">
+                                <displayName>The headers for this field.</displayName>
+                                <value>default:Priority 3</value>
+                            </configuration>
+                        </configurationGroup> <!-- personal_training_3 -->
+
+                    </configurationGroup> <!-- fields -->
+                </configurationGroup> <!-- iHRIS_PersonContinuousProfDev-->
 
             </configurationGroup> <!-- End /modules/forms/formClasses -->
 
@@ -194,10 +280,10 @@
             <status>required:true</status>
 
 
-            <!-- This section will create the person_profdev page so that new professional development
+            <!-- This section will create the person_mcrisk page so that new professional development
                  forms can be created and assigned to a person's record. -->
             <configurationGroup name='person_mcrisk'>
-                <displayName>Person MC and Risk Page</displayName>
+                <displayName>Person Mc and Risk Page</displayName>
                 <description> The page 'person_mcrisk' which has the action of: Add/Update MC and Risk</description>
                 <configuration name='class' values='single'>
                     <displayName>Page Class</displayName>
@@ -226,7 +312,45 @@
                         <value>person_mcrisk</value>
                     </configuration>
                 </configurationGroup>
-            </configurationGroup> <!-- person_profdev -->
+            </configurationGroup> <!-- person_mcrisk -->
+
+            <!-- This section will create the person_continuous_profdev page so that a new continuous professional
+                 development form can be created and assigned to a person's record. -->
+            <configurationGroup name='person_continuous_mcrisk'>
+                <displayName>Person Continuous MC and Risk Page</displayName>
+                <description> The page 'person_continuous_mcrisk' which has the action of: Add/Update Continuous MC and Risk</description>
+                <configuration name='class' values='single'>
+                    <displayName>Page Class</displayName>
+                    <description>The class responsible for displaying this page</description>
+                    <status>required:true</status>
+                    <value>iHRIS_PageFormParentPerson</value>
+                </configuration>
+                <configuration name='style' values='single'>
+                    <displayName>Page Style</displayName>
+                    <description>The Page Style</description>
+                    <value>ihris_common_page_form_parent_person</value>
+                </configuration>
+                <configurationGroup name='args'>
+                    <displayName>Page Options</displayName>
+                    <description>The options that control the access and display of all pages</description>
+                    <configuration name='title' values='single'>
+                        <displayName>Page Title</displayName>
+                        <description>Page Title</description>
+                        <status>required:true</status>
+                        <value>Add/Update Continuous MC and Risk</value>
+                    </configuration>
+                    <configuration name='page_form' values='single'>
+                        <displayName>Form</displayName>
+                        <description>The form this page is using</description>
+                        <status>required:true</status>
+                        <value>person_continuous_mcrisk</value>
+                    </configuration>
+                </configurationGroup>
+            </configurationGroup> <!-- person_continuous_mcrisk -->
+
+
         </configurationGroup> <!-- page -->
-    </configurationGroup> <!-- ProfDevelopment -->
+
+
+    </configurationGroup> <!-- McRisk -->
 </I2CEConfiguration>
