@@ -1,0 +1,524 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="MCModuleForms">
+  <metadata>
+    <displayName>MC Form Customizations</displayName>
+    <className>iHRIS_Module_MCForms</className>
+    <category>MC Modules</category>
+    <description>Different data collected for the MC program</description>
+    <creator>Sovello Hildebrand</creator>
+    <email>sovellohpmgani@gmail.com</email>
+    <link>https://github.com/makhatemakhate/VMMC</link>
+    <version>4.1.10.0</version>
+    <path name="templates">
+      <value>./templates</value>
+    </path>
+    <path name="classes">
+      <value>./lib</value>
+    </path>
+    <priority>350</priority>
+  </metadata>
+  <configurationGroup name="MCModuleForms" path="/I2CE">
+    <configurationGroup name="tasks" path="/I2CE/tasks/task_description" locale="en_US">
+      <configuration name="person_can_view_child_form_prof_education" locale="en_US">
+        <value>Can view prof_education child form of a person</value>
+      </configuration>
+      <configuration name="person_can_edit_child_form_prof_education" locale="en_US">
+        <value>Can edit prof_education child forms of a person</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="tasks_trickle_down" path="/I2CE/tasks/task_trickle_down/">
+      <configuration name="person_can_view_child_form_prof_education" values="many">
+        <value>person_can_view</value>
+      </configuration>
+      <configuration name="person_can_edit_child_form_prof_education" values="many">
+        <value>person_can_view_child_form_prof_education</value>
+        <value>person_can_view</value>
+      </configuration>
+      <configuration name="person_can_view_child_forms" values="many">
+        <value>person_can_view_child_form_prof_education</value>
+      </configuration>
+      <configuration name="person_can_edit_child_forms" values="many">
+        <value>person_can_edit_child_form_prof_education</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="forms" path="/modules/forms">
+      <configurationGroup name="forms">
+        <!--child forms for person-->
+        <configurationGroup name="person">
+          <configurationGroup name="meta">
+            <configuration name="child_forms" values="many">
+              <status>uniquemerge:true</status>
+              <value>risk_reduction</value>
+              <value>medical_history</value>
+              <value>followup_notes</value>
+              <value>adverse_event</value>
+              <value>mc_procedure</value>
+              <value>physical_exam</value>
+            </configuration>
+          </configurationGroup>
+        </configurationGroup>
+        <!--definition of some forms for MC-->
+        
+        <configurationGroup name="risk_reduction">
+          <displayName>MC&amp;Risk Reduction History</displayName>
+          <description>The MC&amp;Risk Reduction History Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>VMMC_RiskReduction</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>MC&amp;Risk Reducation</value>
+          </configuration>
+        </configurationGroup>
+      
+        <configurationGroup name="medical_history">
+          <displayName>Medical History</displayName>
+          <description>The Patient's Medical History Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>VMMC_MedicalHistory</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Medical History</value>
+          </configuration>
+        </configurationGroup>
+      
+        <configurationGroup name="physical_exam">
+          <displayName>Physical Exam History</displayName>
+          <description>The Physical Exam Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>VMMC_PhysicalExam</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Physical Exam</value>
+          </configuration>
+        </configurationGroup>
+      
+        <configurationGroup name="mc_procedure">
+          <displayName>MC Procedures</displayName>
+          <description>MC Procedure Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>VMMC_MCProcedure</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>MC Procedure</value>
+          </configuration>
+        </configurationGroup>
+        
+        <configurationGroup name="adverse_event">
+          <displayName>Adverse Event</displayName>
+          <description>The Adverse Event Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>VMMC_AdverseEvent</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Adverse Event</value>
+          </configuration>
+        </configurationGroup>
+        
+        <configurationGroup name="followup_notes">
+          <displayName>Followup Notes History</displayName>
+          <description>The Followup Notes Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>VMMC_FollowupNotes</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Followup Notes</value>
+          </configuration>
+        </configurationGroup>
+      
+      </configurationGroup>
+      <configurationGroup name="formClasses">
+        
+        <configurationGroup name="VMMC_RiskReduction">
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="degree">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Certificates/Diplomas Received</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="institution">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Name of Institution</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="location">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Address of Institution</value>
+              </configuration>
+            </configurationGroup>
+          <configurationGroup name="start_year">
+            <displayName>The field 'start_year'</displayName>
+            <configuration name="formfield">
+              <displayName>The form field type</displayName>
+              <value>DATE_Y</value>
+            </configuration>
+            <configuration name="headers" type="delimited" locale="en_US">
+              <displayName>The headers for this field.</displayName>
+                 <value>default:Start Year</value>
+            </configuration>
+		<configuration name="default_eval">
+               	 <displayName>The default Value as an eval string</displayName>
+               <value>I2CE_Date::blank()</value>
+              </configuration>
+          </configurationGroup>
+
+            <configurationGroup name="year">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Year of Graduation</value>
+              </configuration>
+		<configuration name="default_eval">
+               	 <displayName>The default Value as an eval string</displayName>
+               <value>I2CE_Date::blank()</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="major">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Major</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+      
+        <configurationGroup name="VMMC_MedicalHistory">
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="degree">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Certificates/Diplomas Received</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="institution">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Name of Institution</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="location">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Address of Institution</value>
+              </configuration>
+            </configurationGroup>
+          <configurationGroup name="start_year">
+            <displayName>The field 'start_year'</displayName>
+            <configuration name="formfield">
+              <displayName>The form field type</displayName>
+              <value>DATE_Y</value>
+            </configuration>
+            <configuration name="headers" type="delimited" locale="en_US">
+              <displayName>The headers for this field.</displayName>
+                 <value>default:Start Year</value>
+            </configuration>
+		<configuration name="default_eval">
+               	 <displayName>The default Value as an eval string</displayName>
+               <value>I2CE_Date::blank()</value>
+              </configuration>
+          </configurationGroup>
+
+            <configurationGroup name="year">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Year of Graduation</value>
+              </configuration>
+		<configuration name="default_eval">
+               	 <displayName>The default Value as an eval string</displayName>
+               <value>I2CE_Date::blank()</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="major">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Major</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+      
+        <configurationGroup name="VMMC_PhysicalExam">
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="degree">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Certificates/Diplomas Received</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="institution">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Name of Institution</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="location">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Address of Institution</value>
+              </configuration>
+            </configurationGroup>
+          <configurationGroup name="start_year">
+            <displayName>The field 'start_year'</displayName>
+            <configuration name="formfield">
+              <displayName>The form field type</displayName>
+              <value>DATE_Y</value>
+            </configuration>
+            <configuration name="headers" type="delimited" locale="en_US">
+              <displayName>The headers for this field.</displayName>
+                 <value>default:Start Year</value>
+            </configuration>
+		<configuration name="default_eval">
+               	 <displayName>The default Value as an eval string</displayName>
+               <value>I2CE_Date::blank()</value>
+              </configuration>
+          </configurationGroup>
+
+            <configurationGroup name="year">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Year of Graduation</value>
+              </configuration>
+		<configuration name="default_eval">
+               	 <displayName>The default Value as an eval string</displayName>
+               <value>I2CE_Date::blank()</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="major">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Major</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+      
+        <configurationGroup name="VMMC_MCProcedure">
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="degree">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Certificates/Diplomas Received</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="institution">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Name of Institution</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="location">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Address of Institution</value>
+              </configuration>
+            </configurationGroup>
+          <configurationGroup name="start_year">
+            <displayName>The field 'start_year'</displayName>
+            <configuration name="formfield">
+              <displayName>The form field type</displayName>
+              <value>DATE_Y</value>
+            </configuration>
+            <configuration name="headers" type="delimited" locale="en_US">
+              <displayName>The headers for this field.</displayName>
+                 <value>default:Start Year</value>
+            </configuration>
+		<configuration name="default_eval">
+               	 <displayName>The default Value as an eval string</displayName>
+               <value>I2CE_Date::blank()</value>
+              </configuration>
+          </configurationGroup>
+
+            <configurationGroup name="year">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Year of Graduation</value>
+              </configuration>
+		<configuration name="default_eval">
+               	 <displayName>The default Value as an eval string</displayName>
+               <value>I2CE_Date::blank()</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="major">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Major</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+      
+        <configurationGroup name="VMMC_AdverseEvent">
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="degree">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Certificates/Diplomas Received</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="institution">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Name of Institution</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="location">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Address of Institution</value>
+              </configuration>
+            </configurationGroup>
+          <configurationGroup name="start_year">
+            <displayName>The field 'start_year'</displayName>
+            <configuration name="formfield">
+              <displayName>The form field type</displayName>
+              <value>DATE_Y</value>
+            </configuration>
+            <configuration name="headers" type="delimited" locale="en_US">
+              <displayName>The headers for this field.</displayName>
+                 <value>default:Start Year</value>
+            </configuration>
+		<configuration name="default_eval">
+               	 <displayName>The default Value as an eval string</displayName>
+               <value>I2CE_Date::blank()</value>
+              </configuration>
+          </configurationGroup>
+
+            <configurationGroup name="year">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Year of Graduation</value>
+              </configuration>
+		<configuration name="default_eval">
+               	 <displayName>The default Value as an eval string</displayName>
+               <value>I2CE_Date::blank()</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="major">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Major</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+      
+        <configurationGroup name="VMMC_FollowupNotes">
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="degree">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Certificates/Diplomas Received</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="institution">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Name of Institution</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="location">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Address of Institution</value>
+              </configuration>
+            </configurationGroup>
+          <configurationGroup name="start_year">
+            <displayName>The field 'start_year'</displayName>
+            <configuration name="formfield">
+              <displayName>The form field type</displayName>
+              <value>DATE_Y</value>
+            </configuration>
+            <configuration name="headers" type="delimited" locale="en_US">
+              <displayName>The headers for this field.</displayName>
+                 <value>default:Start Year</value>
+            </configuration>
+		<configuration name="default_eval">
+               	 <displayName>The default Value as an eval string</displayName>
+               <value>I2CE_Date::blank()</value>
+              </configuration>
+          </configurationGroup>
+
+            <configurationGroup name="year">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Year of Graduation</value>
+              </configuration>
+		<configuration name="default_eval">
+               	 <displayName>The default Value as an eval string</displayName>
+               <value>I2CE_Date::blank()</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="major">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Major</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+      
+      </configurationGroup>
+      <!-- enf of formclasses-->
+    </configurationGroup>
+	<configurationGroup name="page">
+      <configurationGroup name="prof_education">
+        <displayName>Professional Education Page</displayName>
+        <description>The page 'professional education' which has the action of: Add/Update Professional Education History</description>
+        <configuration name="style" values="single">
+          <displayName>Page Style</displayName>
+          <description>The Page Style</description>
+          <value>ihris_common_page_form_parent_person</value>
+        </configuration>
+        <configurationGroup name="args">
+          <displayName>Page Options</displayName>
+          <description>The options that control the access and display of all pages</description>
+          <configuration name="title" values="single" locale="en_US">
+            <displayName>Page Title</displayName>
+            <description>Page Title</description>
+            <status>required:true</status>
+            <value>Add/Update Professional Education History</value>
+          </configuration>
+          <configuration name="page_form" values="single">
+            <displayName>Form</displayName>
+            <description>The form this page is using</description>
+            <status>required:true</status>
+            <value>prof_education</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    </configurationGroup>
+    <!-- end of page-->
+  </configurationGroup>
+</I2CEConfiguration>
