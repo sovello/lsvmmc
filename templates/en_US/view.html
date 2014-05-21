@@ -10,10 +10,10 @@
     <p class="editRecordsData" id="individual_links">
       <a href="" class="hide" title="Hide" onclick="return hideDiv('individual', this );">Hide</a>
      <span task="person_can_edit_child_form_demographic" type="form" name="person:id" href="demographic?parent=" ifset="!demographic:id">Add Demographic Information</span>
-     <span type='module' name='PersonID' ifenabled='true'>
+     <span type='module' name='PersonID' ifenabled='!true'>
         <span task='person_can_edit_child_form_person_id' type="form" name="person:id" href="person_id?parent=" >Add Identification</span>
       </span>
-     <span type='module' name='PrintedForms' ifenabled='true'>
+     <span type='module' name='PrintedForms' ifenabled='!true'>
 	<span task='printed_forms_can_access'>
 	  <span type='module' if="PrintedForms->hasValidForms('person')">
 	    <span type='form' href="PrintedForms/menu?id=" name="person:id">Standardized Letters</span>
@@ -56,10 +56,10 @@
     <br style="clear: both;" />
   </div> <!--end records data-->
 
-  <span type='module' name='MCRisk' ifenabled='true'>
+  <span type='module' name='MCRisk'>
     <div class="recordsData" task='person_can_view_child_form_person_contact_work'>
       <h3>
-        <a name="jump_contact">MC Risk Reduction Information</a>
+        <a name="jump_contact">MC &amp; Risk Reduction Information</a>
       </h3>
       <p class="editRecordsData" id="contact_links">
         <a href="" class="hide" title="Hide" onclick="return hideDiv('contact', this );">Hide</a>
@@ -73,7 +73,7 @@
      <!-- recordsData -->
   </span>
   
-  <span type='module' name='MedicalHistory' ifenabled='true'>
+  <span type='module' name='MedicalHistory'>
     <div class="recordsData" task='person_can_view_child_form_dependent'>
       <h3><a name="jump_dependent">Medical History</a></h3>
       <p class="editRecordsData">
@@ -85,7 +85,7 @@
     </div>
   </span>
   
-  <span type='module' name='PhysicalExam' ifenabled='true'>
+  <span type='module' name='PhysicalExam'>
     <div class="recordsData" task='person_can_view_child_form_dependent'>
       <h3><a name="jump_dependent">Physical Examination History</a></h3>
       <p class="editRecordsData">
@@ -97,7 +97,7 @@
     </div>
   </span>
 
-  <span type='module' name='MCProcedure' ifenabled='true'>
+  <span type='module' name='MCProcedure'>
     <div class="recordsData" task='person_can_view_child_form_confirmation'>
       <h3>
         <a name="jump_confirmation">MC Procedure Information</a>
@@ -108,32 +108,18 @@
       </p>
       <div id='confirmation' ></div>
       <br style="clear: both;" />
-      	
     </div>
      <!--  recordsData -->
   </span>
   <!-- New professional development section for the Professional Development module -->
-  <span type="module" name="McRisk" ifenabled="true">
-  <div class="recordsData">
-      <h3><a name="jump_mcrisk">MC and Risk Reduction</a></h3>
-      <p class="editRecordsData" id="mcrisk_links"><a href="" class="hide" title="Hide" onclick="return hideDiv('mcrisk', this );">Hide</a>
-          <span task='person_can_edit_child_form_person_mcrisk' type="form" name="person:id" href="person_mcrisk?parent=">Add Data on MC and Risk Reduction</span>
-      </p>
-
-      <div id="person_mcrisk"></div>
-      <br style="clear: both;" />
-  </div> <!--  recordsData -->
-  </span>
-  <!-- End of Professional Development additions -->
-
-  <span type='module' name='AE' ifenabled='true'>
+  <span type='module' name='AE'>
     <div class="recordsData" task='person_can_view_child_form_accident'>	
       <h3>
         <a name="jump_accident">AE</a>
       </h3>
       <p class="editRecordsData">
         <a href="" class="hide" title="Hide" onclick="return hideDiv('accidents', this );">Hide</a>
-        <span task='person_can_edit_child_form_accident' type="form" name="person:id" href="accident?parent=">Report Accident</span>
+        <span task='person_can_edit_child_form_accident' type="form" name="person:id" href="accident?parent=">Add AE</span>
       </p>
       <div id='accidents'></div>
       
@@ -141,19 +127,17 @@
     </div>
   </span>
 
-  <span type='module' name='Followp' ifenabled='true'>
+  <span type='module' name='Followup'>
     <div class="recordsData" task='person_can_view_child_form_notes'>
       <h3>
         <a name="jump_notes">Follow Up Notes</a>
       </h3>
       <p class="editRecordsData">
         <a href="" class="hide" title="Hide" onclick="return hideDiv('notes', this );">Hide</a>
-        <span task='person_can_edit_child_form_notes' type="form" name="person:id" href="notes?parent=" >Add F</span>
+        <span task='person_can_edit_child_form_notes' type="form" name="person:id" href="notes?parent=" >Add Follow up Notes</span>
       </p>
-      
       <div id="notes"></div>
       <br style="clear: both;" />
-      	
     </div>
      <!--  recordsData -->
   </span>
@@ -163,13 +147,12 @@
     <p class="editRecordsData" id="record_status_links">
       <a href="" class="hide" title="Hide" onclick="return hideDiv('person_record_status', this );">Hide</a>
     </p>
-
     <div id="person_record_status"></div> 
     <br style="clear: both;" />	
   </div> <!--  recordsData -->
 
 
-  <span type='module' name='PersonArchivedScan' ifenabled='true'>
+  <span type='module' name='PersonArchivedScan'>
     <div class="recordsData" task='person_can_view_child_form_person_archive_scan'>
       <h3>
         <a name="jump_archived_scans">Scanned Paper Records</a>
@@ -178,15 +161,9 @@
         <a href="" class="hide" title="Hide" onclick="return hideDiv('notes', this );">Hide</a>
         <span task='person_can_edit_child_form_person_archive_scan' type="form" name="person:id" href="person_archive_scan?parent=" >Add Scanned Document</span>
       </p>
-      
-
-
       <div id='person_archive_scan' ></div>
-      <br style="clear: both;" />
-      	
+      <br style="clear: both;" />	
     </div>
      <!--  recordsData -->
   </span>  
 </div>
-
-
