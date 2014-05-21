@@ -522,7 +522,7 @@
               <displayName>The field 'circumcised_where'</displayName>
               <configuration name="formfield">
                 <displayName>The form field type</displayName>
-                <value>YESNO</value>
+                <value>STRING_LINE</value>
               </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
@@ -569,7 +569,7 @@
                    <value>default:Urethral Discharge</value>
               </configuration>
             </configurationGroup>
-            <configusrationGroup name="hypo_spadia">
+            <configurationGroup name="hypo_spadia">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
                 <value>default:Hypo/Hyper Spadias</value>
@@ -673,8 +673,7 @@
                 <displayName>The default Value as an eval string</displayName>
                 <value>I2CE_Date::now()</value>
               </configuration>
-            </configurationGroup>
-              
+            </configurationGroup>   
           </configurationGroup>
         </configurationGroup>
         <configurationGroup name="VMMC_AdverseEvent">
@@ -936,9 +935,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Positive</value>
-            </configuration>
+            <value>name:Positive</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="N">
@@ -946,9 +943,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Negative</value>
-            </configuration>
+            <value>name:Negative</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -960,9 +955,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>STI</value>
-            </configuration>
+            <value>name:STI</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="ar">
@@ -970,9 +963,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>ART Clinic</value>
-            </configuration>
+            <value>name:ART Clinic</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="su">
@@ -980,9 +971,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Other Surgical</value>
-            </configuration>
+            <value>name:Other Surgical</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="no">
@@ -990,12 +979,9 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Client Not Referred</value>
-            </configuration>
+            <value>name:Client Not Referred</value>
           </configuration>
         </configurationGroup>
-      
       </configurationGroup>
       <configurationGroup name="visit">
         <displayName>Client's Visits to Center</displayName>
@@ -1005,9 +991,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>First Visit</value>
-            </configuration>
+            <value>name:First Visit</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="de">
@@ -1015,9 +999,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Second Visit</value>
-            </configuration>
+            <value>name:Second Visit</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="tr">
@@ -1025,9 +1007,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Third Visit</value>
-            </configuration>
+            <value>name:Third Visit</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1037,9 +1017,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+            <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1047,9 +1025,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+            <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1059,9 +1035,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+              <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1069,9 +1043,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+            <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1081,9 +1053,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+            <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1091,9 +1061,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+            <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1103,9 +1071,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+            <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1113,9 +1079,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+            <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1125,9 +1089,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+            <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1135,9 +1097,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+            <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1147,9 +1107,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+            <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1157,9 +1115,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+            <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1169,9 +1125,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+            <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1179,9 +1133,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+            <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1191,9 +1143,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+            <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1201,9 +1151,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+            <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1213,9 +1161,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+            <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1223,9 +1169,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+            <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1235,9 +1179,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+            <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1245,9 +1187,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+            <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1257,9 +1197,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+            <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1267,9 +1205,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+            <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1279,9 +1215,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+            <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1289,9 +1223,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+            <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1302,9 +1234,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+            <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1312,9 +1242,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+            <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -1325,9 +1253,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Moderate</value>
-            </configuration>
+            <value>name:Moderate</value>
           </configuration>
         </configurationGroup>
         <configurationGroup name="s">
@@ -1335,9 +1261,7 @@
             <value>2014-05-20 17:00:00</value>
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
-            <configuration name="name">
-              <value>Severe</value>
-            </configuration>
+              <value>name:Severe</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
