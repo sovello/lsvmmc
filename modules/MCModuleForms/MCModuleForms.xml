@@ -652,15 +652,15 @@
                 <value>default:Pain</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="ins_skin_removed">
-              <displayName>The field 'ins_skin_removed'</displayName>
+            <configurationGroup name="anesthetic">
+              <displayName>The field 'anesthetic'</displayName>
               <configuration name="formfield">
                 <displayName>The form field type</displayName>
                 <value>MAP</value>
               </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Insufficient Skin Removed</value>
+                <value>default:Anesthetic Related Event</value>
               </configuration>
             </configurationGroup>
             <configurationGroup name="swelling">
@@ -751,17 +751,6 @@
                 <value>default:Psychobehavioral Problems</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="anesthetic">
-              <displayName>The field 'anesthetic'</displayName>
-              <configuration name="formfield">
-                <displayName>The form field type</displayName>
-                <value>MAP</value>
-              </configuration>
-              <configuration name="headers" type="delimited" locale="en_US">
-                <displayName>The headers for this field.</displayName>
-                <value>default:Anesthetic Related Event</value>
-              </configuration>
-            </configurationGroup>
             <configurationGroup name="ex_bleeding">
               <displayName>The field 'ex_bleeding'</displayName>
               <configuration name="formfield">
@@ -771,6 +760,17 @@
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
                 <value>default:Excessive Bleeding</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="ins_skin_removed">
+              <displayName>The field 'ins_skin_removed'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Insufficient Skin Removed</value>
               </configuration>
             </configurationGroup>
             <configurationGroup name="ex_skin_removed">
