@@ -20,30 +20,119 @@
   </metadata>
   <configurationGroup name="MCModuleForms" path="/I2CE">
     <configurationGroup name="tasks" path="/I2CE/tasks/task_description" locale="en_US">
-      <configuration name="person_can_view_child_form_prof_education" locale="en_US">
-        <value>Can view prof_education child form of a person</value>
+      <configuration name="person_can_view_child_form_risk_reduction" locale="en_US">
+        <value>Can view risk_reduction child form of a person</value>
       </configuration>
-      <configuration name="person_can_edit_child_form_prof_education" locale="en_US">
-        <value>Can edit prof_education child forms of a person</value>
+      <configuration name="person_can_edit_child_form_risk_reduction" locale="en_US">
+        <value>Can edit risk_reduction child forms of a person</value>
+      </configuration>
+      <configuration name="person_can_view_child_form_medical_history" locale="en_US">
+        <value>Can view medical_history child form of a person</value>
+      </configuration>
+      <configuration name="person_can_edit_child_form_medical_history" locale="en_US">
+        <value>Can edit medical_history child forms of a person</value>
+      </configuration>
+      <configuration name="person_can_view_child_form_physical_exam" locale="en_US">
+        <value>Can view physical_exam child form of a person</value>
+      </configuration>
+      <configuration name="person_can_edit_child_form_physical_exam" locale="en_US">
+        <value>Can edit physical_exam child forms of a person</value>
+      </configuration>
+      <configuration name="person_can_view_child_form_mc_procedure" locale="en_US">
+        <value>Can view mc_procedure child form of a person</value>
+      </configuration>
+      <configuration name="person_can_edit_child_form_mc_procedure" locale="en_US">
+        <value>Can edit mc_procedure child forms of a person</value>
+      </configuration>
+      <configuration name="person_can_view_child_form_adverse_event" locale="en_US">
+        <value>Can view adverse_event child form of a person</value>
+      </configuration>
+      <configuration name="person_can_edit_child_form_adverse_event" locale="en_US">
+        <value>Can edit adverse_event child forms of a person</value>
+      </configuration>
+      <configuration name="person_can_view_child_form_followup_notes" locale="en_US">
+        <value>Can view followup_notes child form of a person</value>
+      </configuration>
+      <configuration name="person_can_edit_child_form_followup_notes" locale="en_US">
+        <value>Can edit followup_notes child forms of a person</value>
       </configuration>
     </configurationGroup>
     <configurationGroup name="tasks_trickle_down" path="/I2CE/tasks/task_trickle_down/">
-      <configuration name="person_can_view_child_form_prof_education" values="many">
+      <configuration name="person_can_view_child_form_risk_reduction" values="many">
         <value>person_can_view</value>
       </configuration>
-      <configuration name="person_can_edit_child_form_prof_education" values="many">
-        <value>person_can_view_child_form_prof_education</value>
+      <configuration name="person_can_edit_child_form_risk_reduction" values="many">
+        <value>person_can_view_child_form_risk_reduction</value>
+        <value>person_can_view</value>
+      </configuration>
+      <configuration name="person_can_view_child_form_medical_history" values="many">
+        <value>person_can_view</value>
+      </configuration>
+      <configuration name="person_can_edit_child_form_medical_history" values="many">
+        <value>person_can_view_child_form_medical_history</value>
+        <value>person_can_view</value>
+      </configuration>
+      <configuration name="person_can_view_child_form_physical_exam" values="many">
+        <value>person_can_view</value>
+      </configuration>
+      <configuration name="person_can_edit_child_form_physical_exam" values="many">
+        <value>person_can_view_child_form_physical_exam</value>
+        <value>person_can_view</value>
+      </configuration>
+      <configuration name="person_can_view_child_form_mc_procedure" values="many">
+        <value>person_can_view</value>
+      </configuration>
+      <configuration name="person_can_edit_child_form_mc_procedure" values="many">
+        <value>person_can_view_child_form_mc_procedure</value>
+        <value>person_can_view</value>
+      </configuration>
+      <configuration name="person_can_view_child_form_adverse_event" values="many">
+        <value>person_can_view</value>
+      </configuration>
+      <configuration name="person_can_edit_child_form_adverse_event" values="many">
+        <value>person_can_view_child_form_adverse_event</value>
+        <value>person_can_view</value>
+      </configuration>
+      <configuration name="person_can_view_child_form_followup_notes" values="many">
+        <value>person_can_view</value>
+      </configuration>
+      <configuration name="person_can_edit_child_form_followup_notes" values="many">
+        <value>person_can_view_child_form_followup_notes</value>
         <value>person_can_view</value>
       </configuration>
       <configuration name="person_can_view_child_forms" values="many">
-        <value>person_can_view_child_form_prof_education</value>
+        <value>person_can_view_child_form_risk_reduction</value>
+        <value>person_can_view_child_form_medical_history</value>
+        <value>person_can_view_child_form_physical_exam</value>
+        <value>person_can_view_child_form_mc_procedure</value>
+        <value>person_can_view_child_form_adverse_event</value>
+        <value>person_can_view_child_form_followup_notes</value>
       </configuration>
       <configuration name="person_can_edit_child_forms" values="many">
-        <value>person_can_edit_child_form_prof_education</value>
+        <value>person_can_edit_child_form_risk_reduction</value>
+        <value>person_can_edit_child_form_medical_history</value>
+        <value>person_can_edit_child_form_physical_exam</value>
+        <value>person_can_edit_child_form_mc_procedure</value>
+        <value>person_can_edit_child_form_adverse_event</value>
+        <value>person_can_edit_child_form_followup_notes</value>
       </configuration>
     </configurationGroup>
     <configurationGroup name="forms" path="/modules/forms">
       <configurationGroup name="forms">
+        <!--child forms for person-->
+        <configurationGroup name="person">
+          <configurationGroup name="meta">
+            <configuration name="child_forms" values="many">
+              <status>uniquemerge:true</status>
+              <value>risk_reduction</value>
+              <value>medical_history</value>
+              <value>physical_exam</value>
+              <value>mc_procedure</value>
+              <value>adverse_event</value>
+              <value>followup_notes</value>
+            </configuration>
+          </configurationGroup>
+        </configurationGroup>
         <!--definition of some forms for MC-->
         <configurationGroup name="risk_reduction">
           <displayName>MC&amp;Risk Reduction History</displayName>
@@ -353,20 +442,6 @@
             <value>Psychobehavioral Problems</value>
           </configuration>
         </configurationGroup>  
-        <!--child forms for person-->
-        <configurationGroup name="person">
-          <configurationGroup name="meta">
-            <configuration name="child_forms" values="many">
-              <status>uniquemerge:true</status>
-              <value>risk_reduction</value>
-              <value>medical_history</value>
-              <value>physical_exam</value>
-              <value>mc_procedure</value>
-              <value>adverse_event</value>
-              <value>followup_notes</value>
-            </configuration>
-          </configurationGroup>
-        </configurationGroup>
       </configurationGroup>
       <configurationGroup name="formClasses">
         <configurationGroup name="VMMC_RiskReduction">
@@ -473,31 +548,81 @@
           </configuration>
           <configurationGroup name="fields">
             <displayName>The fields defined for this form</displayName>
-            <configurationGroup name="circumcised_before">
+            <configurationGroup name="paraphy">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Has the client been circumcised before?</value>
+                <value>default:Paraphymosis</value>
               </configuration>
               <configuration name="formfield">
                 <displayName>THe form field type</displayName>
                 <value>YESNO</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="circumcised_where">
-              <displayName>The field 'circumcised_where'</displayName>
+            <configurationGroup name="urethra_discharge">
+              <displayName>The field 'urethra_discharge'</displayName>
               <configuration name="formfield">
                 <displayName>The form field type</displayName>
                 <value>YESNO</value>
               </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                   <value>default:If Yes, Where</value>
+                   <value>default:Urethral Discharge</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="client_sti">
+            <configusrationGroup name="hypo_spadia">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Has the client had any STIs?</value>
+                <value>default:Hypo/Hyper Spadias</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="scrotum_swell">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Swelling of Scrotum</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="genital_ulcer">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Genital Ulcer</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="pen_wart">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Penile Warts</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="phimosis">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Phimosis</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="erect_dysfunction">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Erectile Dysfunction</value>
               </configuration>
               <configuration name="formfield">
                 <displayName>The form field type</displayName>
