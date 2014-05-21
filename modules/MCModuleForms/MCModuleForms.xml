@@ -44,22 +44,7 @@
     </configurationGroup>
     <configurationGroup name="forms" path="/modules/forms">
       <configurationGroup name="forms">
-        <!--child forms for person-->
-        <configurationGroup name="person">
-          <configurationGroup name="meta">
-            <configuration name="child_forms" values="many">
-              <status>uniquemerge:true</status>
-              <value>risk_reduction</value>
-              <value>medical_history</value>
-              <value>followup_notes</value>
-              <value>adverse_event</value>
-              <value>mc_procedure</value>
-              <value>physical_exam</value>
-            </configuration>
-          </configurationGroup>
-        </configurationGroup>
         <!--definition of some forms for MC-->
-        
         <configurationGroup name="risk_reduction">
           <displayName>MC&amp;Risk Reduction History</displayName>
           <description>The MC&amp;Risk Reduction History Form</description>
@@ -74,7 +59,6 @@
             <value>MC&amp;Risk Reducation</value>
           </configuration>
         </configurationGroup>
-      
         <configurationGroup name="medical_history">
           <displayName>Medical History</displayName>
           <description>The Patient's Medical History Form</description>
@@ -89,7 +73,6 @@
             <value>Medical History</value>
           </configuration>
         </configurationGroup>
-      
         <configurationGroup name="physical_exam">
           <displayName>Physical Exam History</displayName>
           <description>The Physical Exam Form</description>
@@ -104,7 +87,6 @@
             <value>Physical Exam</value>
           </configuration>
         </configurationGroup>
-      
         <configurationGroup name="mc_procedure">
           <displayName>MC Procedures</displayName>
           <description>MC Procedure Form</description>
@@ -119,7 +101,6 @@
             <value>MC Procedure</value>
           </configuration>
         </configurationGroup>
-        
         <configurationGroup name="adverse_event">
           <displayName>Adverse Event</displayName>
           <description>The Adverse Event Form</description>
@@ -134,7 +115,6 @@
             <value>Adverse Event</value>
           </configuration>
         </configurationGroup>
-        
         <configurationGroup name="followup_notes">
           <displayName>Followup Notes History</displayName>
           <description>The Followup Notes Form</description>
@@ -149,353 +129,1099 @@
             <value>Followup Notes</value>
           </configuration>
         </configurationGroup>
-      
+        <configurationGroup name="hiv_testresults">
+          <displayName>HIV Test Results</displayName>
+          <description>The HIV Test Results Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>HIV Test Results Type</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="pain">
+          <displayName>Pain</displayName>
+          <description>The Pain Level Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Pain Level</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="reference">
+          <displayName>Reference</displayName>
+          <description>The Client Reference to show where the client is referred to Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Client Reference Point</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="anesthetic">
+          <displayName>Anesthetic Pain</displayName>
+          <description>The Anesthetic Pain Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Anesthetic Pain Level</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="ex_bleeding">
+          <displayName>Excessive Bleeding</displayName>
+          <description>The Excessive Bleeding Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Excessive Bleeding Level</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="ex_skin_removed">
+          <displayName>HIV Test Results</displayName>
+          <description>The HIV Test Results Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>HIV Test Results Type</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="penis_damage">
+          <displayName>Damage to Penis</displayName>
+          <description>The Damage to Penis Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Level of Damage to Penis</value>
+          </configuration>
+        </configurationGroup> 
+        <configurationGroup name="visit">
+          <displayName>Visits to Clinic</displayName>
+          <description>The Visits to Clinic Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Visit</value>
+          </configuration>
+        </configurationGroup>  
+        <configurationGroup name="ins_skin_removed">
+          <displayName>Insufficient Skin Removed</displayName>
+          <description>The Insufficient Skin Removed Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Insufficient Skin Removed</value>
+          </configuration>
+        </configurationGroup>  
+        <configurationGroup name="swelling">
+          <displayName>Swelling</displayName>
+          <description>The Swelling Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Swelling</value>
+          </configuration>
+        </configurationGroup>  
+        <configurationGroup name="wound_delay">
+          <displayName>Delayed Wound Healing</displayName>
+          <description>The Delayed Wound Healing Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Delayed Wound Healing</value>
+          </configuration>
+        </configurationGroup>  
+        <configurationGroup name="appearance">
+          <displayName>Appearance</displayName>
+          <description>The Appearance Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Appearance</value>
+          </configuration>
+        </configurationGroup>  
+        <configurationGroup name="urinate_problem">
+          <displayName>Problems with Urinating</displayName>
+          <description>The Problems with Urinating Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Problems with Urinating</value>
+          </configuration>
+        </configurationGroup>  
+        <configurationGroup name="skin_torsion">
+          <displayName>Torsion to skin</displayName>
+          <description>The Torsion to skin Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Torsion to skin</value>
+          </configuration>
+        </configurationGroup>  
+        <configurationGroup name="erectile_dysfunction">
+          <displayName>Erectile Dysfunction</displayName>
+          <description>The Erectile Dysfunction Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Erectile Dysfunction</value>
+          </configuration>
+        </configurationGroup>  
+        <configurationGroup name="psycho_behavior">
+          <displayName>Psychobehavioral Problems</displayName>
+          <description>The Psychobehavioral Problems Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Psychobehavioral Problems</value>
+          </configuration>
+        </configurationGroup>  
+        <!--child forms for person-->
+        <configurationGroup name="person">
+          <configurationGroup name="meta">
+            <configuration name="child_forms" values="many">
+              <status>uniquemerge:true</status>
+              <value>risk_reduction</value>
+              <value>medical_history</value>
+              <value>physical_exam</value>
+              <value>mc_procedure</value>
+              <value>adverse_event</value>
+              <value>followup_notes</value>
+            </configuration>
+          </configurationGroup>
+        </configurationGroup>
       </configurationGroup>
       <configurationGroup name="formClasses">
-        
         <configurationGroup name="VMMC_RiskReduction">
+          <configuration name="extends">
+            <displayName>The class this form extends</displayName>
+            <value>I2CE_Form</value>
+          </configuration>
           <configurationGroup name="fields">
             <displayName>The fields defined for this form</displayName>
-            <configurationGroup name="degree">
+            <configurationGroup name="hiv_tested">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Certificates/Diplomas Received</value>
+                <value>default:Client Tested for HIV today?</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <value>YESNO</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="institution">
+            <configurationGroup name="hiv_testingdate">
+              <displayName>The field 'hiv_testingdate'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>DATE_YMD</value>
+              </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Name of Institution</value>
+                   <value>default:Date of HIV Testing</value>
+              </configuration>
+              <configuration name="default_eval">
+                <displayName>The default Value as an eval string</displayName>
+                <value>I2CE_Date::blank()</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="location">
+            
+            <configurationGroup name="hiv_testresults">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Address of Institution</value>
+                <value>default:HIV Test Results</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <value>MAP</value>
               </configuration>
             </configurationGroup>
-          <configurationGroup name="start_year">
-            <displayName>The field 'start_year'</displayName>
-            <configuration name="formfield">
-              <displayName>The form field type</displayName>
-              <value>DATE_Y</value>
-            </configuration>
-            <configuration name="headers" type="delimited" locale="en_US">
-              <displayName>The headers for this field.</displayName>
-                 <value>default:Start Year</value>
-            </configuration>
-		<configuration name="default_eval">
-               	 <displayName>The default Value as an eval string</displayName>
-               <value>I2CE_Date::blank()</value>
-              </configuration>
-          </configurationGroup>
-
-            <configurationGroup name="year">
+            
+            <configurationGroup name="declined_test">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Year of Graduation</value>
+                <value>default:Client Declined Testing?</value>
               </configuration>
-		<configuration name="default_eval">
-               	 <displayName>The default Value as an eval string</displayName>
-               <value>I2CE_Date::blank()</value>
-              </configuration>
-            </configurationGroup>
-            <configurationGroup name="major">
-              <configuration name="headers" type="delimited" locale="en_US">
-                <displayName>The headers for this field.</displayName>
-                <value>default:Major</value>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
               </configuration>
             </configurationGroup>
+            
           </configurationGroup>
         </configurationGroup>
-      
         <configurationGroup name="VMMC_MedicalHistory">
+          <configuration name="extends">
+            <displayName>The class this form extends</displayName>
+            <value>I2CE_Form</value>
+          </configuration>
           <configurationGroup name="fields">
             <displayName>The fields defined for this form</displayName>
-            <configurationGroup name="degree">
+            <configurationGroup name="circumcised_before">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Certificates/Diplomas Received</value>
+                <value>default:Has the client been circumcised before?</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <value>YESNO</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="institution">
+            <configurationGroup name="circumcised_where">
+              <displayName>The field 'circumcised_where'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Name of Institution</value>
+                   <value>default:If Yes, Where</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="location">
+            <configurationGroup name="client_sti">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Address of Institution</value>
+                <value>default:Has the client had any STIs?</value>
               </configuration>
-            </configurationGroup>
-          <configurationGroup name="start_year">
-            <displayName>The field 'start_year'</displayName>
-            <configuration name="formfield">
-              <displayName>The form field type</displayName>
-              <value>DATE_Y</value>
-            </configuration>
-            <configuration name="headers" type="delimited" locale="en_US">
-              <displayName>The headers for this field.</displayName>
-                 <value>default:Start Year</value>
-            </configuration>
-		<configuration name="default_eval">
-               	 <displayName>The default Value as an eval string</displayName>
-               <value>I2CE_Date::blank()</value>
-              </configuration>
-          </configurationGroup>
-
-            <configurationGroup name="year">
-              <configuration name="headers" type="delimited" locale="en_US">
-                <displayName>The headers for this field.</displayName>
-                <value>default:Year of Graduation</value>
-              </configuration>
-		<configuration name="default_eval">
-               	 <displayName>The default Value as an eval string</displayName>
-               <value>I2CE_Date::blank()</value>
-              </configuration>
-            </configurationGroup>
-            <configurationGroup name="major">
-              <configuration name="headers" type="delimited" locale="en_US">
-                <displayName>The headers for this field.</displayName>
-                <value>default:Major</value>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
               </configuration>
             </configurationGroup>
           </configurationGroup>
         </configurationGroup>
-      
         <configurationGroup name="VMMC_PhysicalExam">
+          <configuration name="extends">
+            <displayName>The class this form extends</displayName>
+            <value>I2CE_Form</value>
+          </configuration>
           <configurationGroup name="fields">
             <displayName>The fields defined for this form</displayName>
-            <configurationGroup name="degree">
+            <configurationGroup name="circumcised_before">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Certificates/Diplomas Received</value>
+                <value>default:Has the client been circumcised before?</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <value>YESNO</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="institution">
+            <configurationGroup name="circumcised_where">
+              <displayName>The field 'circumcised_where'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Name of Institution</value>
+                   <value>default:If Yes, Where</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="location">
+            <configurationGroup name="client_sti">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Address of Institution</value>
+                <value>default:Has the client had any STIs?</value>
               </configuration>
-            </configurationGroup>
-          <configurationGroup name="start_year">
-            <displayName>The field 'start_year'</displayName>
-            <configuration name="formfield">
-              <displayName>The form field type</displayName>
-              <value>DATE_Y</value>
-            </configuration>
-            <configuration name="headers" type="delimited" locale="en_US">
-              <displayName>The headers for this field.</displayName>
-                 <value>default:Start Year</value>
-            </configuration>
-		<configuration name="default_eval">
-               	 <displayName>The default Value as an eval string</displayName>
-               <value>I2CE_Date::blank()</value>
-              </configuration>
-          </configurationGroup>
-
-            <configurationGroup name="year">
-              <configuration name="headers" type="delimited" locale="en_US">
-                <displayName>The headers for this field.</displayName>
-                <value>default:Year of Graduation</value>
-              </configuration>
-		<configuration name="default_eval">
-               	 <displayName>The default Value as an eval string</displayName>
-               <value>I2CE_Date::blank()</value>
-              </configuration>
-            </configurationGroup>
-            <configurationGroup name="major">
-              <configuration name="headers" type="delimited" locale="en_US">
-                <displayName>The headers for this field.</displayName>
-                <value>default:Major</value>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
               </configuration>
             </configurationGroup>
           </configurationGroup>
         </configurationGroup>
-      
         <configurationGroup name="VMMC_MCProcedure">
+          <configuration name="extends">
+            <displayName>The class this form extends</displayName>
+            <value>I2CE_Form</value>
+          </configuration>
           <configurationGroup name="fields">
             <displayName>The fields defined for this form</displayName>
-            <configurationGroup name="degree">
+            <configurationGroup name="cleared">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Certificates/Diplomas Received</value>
+                <value>default:Client cleared for Medical Procedure?</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <value>YESNO</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="institution">
+            <configurationGroup name="reference">
+              <displayName>The field 'referred_to'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Name of Institution</value>
+                   <value>default:Client Referred To</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="location">
+            <configurationGroup name="procedure_date">
+              <displayName>The field 'procedure_date'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>DATE_YMD</value>
+              </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Address of Institution</value>
+                   <value>default:Date of MC Procedure</value>
+              </configuration>
+              <configuration name="default_eval">
+                <displayName>The default Value as an eval string</displayName>
+                <value>I2CE_Date::now()</value>
               </configuration>
             </configurationGroup>
-          <configurationGroup name="start_year">
-            <displayName>The field 'start_year'</displayName>
-            <configuration name="formfield">
-              <displayName>The form field type</displayName>
-              <value>DATE_Y</value>
-            </configuration>
-            <configuration name="headers" type="delimited" locale="en_US">
-              <displayName>The headers for this field.</displayName>
-                 <value>default:Start Year</value>
-            </configuration>
-		<configuration name="default_eval">
-               	 <displayName>The default Value as an eval string</displayName>
-               <value>I2CE_Date::blank()</value>
-              </configuration>
-          </configurationGroup>
-
-            <configurationGroup name="year">
-              <configuration name="headers" type="delimited" locale="en_US">
-                <displayName>The headers for this field.</displayName>
-                <value>default:Year of Graduation</value>
-              </configuration>
-		<configuration name="default_eval">
-               	 <displayName>The default Value as an eval string</displayName>
-               <value>I2CE_Date::blank()</value>
-              </configuration>
-            </configurationGroup>
-            <configurationGroup name="major">
-              <configuration name="headers" type="delimited" locale="en_US">
-                <displayName>The headers for this field.</displayName>
-                <value>default:Major</value>
-              </configuration>
-            </configurationGroup>
+              
           </configurationGroup>
         </configurationGroup>
-      
         <configurationGroup name="VMMC_AdverseEvent">
+          <configuration name="extends">
+            <value>I2CE_Form</value>
+          </configuration>
           <configurationGroup name="fields">
             <displayName>The fields defined for this form</displayName>
-            <configurationGroup name="degree">
+            <configurationGroup name="adv_event">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Certificates/Diplomas Received</value>
+                <value>default:Adverse Event?</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <value>YESNO</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="institution">
+            <configurationGroup name="pain">
+              <displayName>The field 'pain'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Name of Institution</value>
+                   <value>default:Pain</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="location">
+            <configurationGroup name="anesthetic">
+              <displayName>The field 'anesthetic'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Address of Institution</value>
+                   <value>default:Anesthetic Related Event</value>
               </configuration>
             </configurationGroup>
-          <configurationGroup name="start_year">
-            <displayName>The field 'start_year'</displayName>
-            <configuration name="formfield">
-              <displayName>The form field type</displayName>
-              <value>DATE_Y</value>
-            </configuration>
-            <configuration name="headers" type="delimited" locale="en_US">
-              <displayName>The headers for this field.</displayName>
-                 <value>default:Start Year</value>
-            </configuration>
-		<configuration name="default_eval">
-               	 <displayName>The default Value as an eval string</displayName>
-               <value>I2CE_Date::blank()</value>
+            <configurationGroup name="ex_bleeding">
+              <displayName>The field 'ex_bleeding'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
               </configuration>
-          </configurationGroup>
-
-            <configurationGroup name="year">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Year of Graduation</value>
-              </configuration>
-		<configuration name="default_eval">
-               	 <displayName>The default Value as an eval string</displayName>
-               <value>I2CE_Date::blank()</value>
+                   <value>default:Excessive Bleeding</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="major">
+            <configurationGroup name="ex_skin_removed">
+              <displayName>The field 'ex_skin_removed'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Major</value>
+                   <value>default:Excessive Skin Removed</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="penis_damage">
+              <displayName>The field 'penis_damage'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                   <value>default:Damage to Penis</value>
               </configuration>
             </configurationGroup>
           </configurationGroup>
         </configurationGroup>
-      
         <configurationGroup name="VMMC_FollowupNotes">
+          <configuration name="extends">
+            <value>I2CE_Form</value>
+          </configuration>
           <configurationGroup name="fields">
             <displayName>The fields defined for this form</displayName>
-            <configurationGroup name="degree">
+            <configurationGroup name="visit">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Certificates/Diplomas Received</value>
+                <value>default:Visit</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <value>YESNO</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="institution">
+            <configurationGroup name="pain">
+              <displayName>The field 'pain'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Name of Institution</value>
+                <value>default:Pain</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="location">
+            <configurationGroup name="ins_skin_removed">
+              <displayName>The field 'ins_skin_removed'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Address of Institution</value>
+                <value>default:Insufficient Skin Removed</value>
               </configuration>
             </configurationGroup>
-          <configurationGroup name="start_year">
-            <displayName>The field 'start_year'</displayName>
-            <configuration name="formfield">
-              <displayName>The form field type</displayName>
-              <value>DATE_Y</value>
-            </configuration>
-            <configuration name="headers" type="delimited" locale="en_US">
-              <displayName>The headers for this field.</displayName>
-                 <value>default:Start Year</value>
-            </configuration>
-		<configuration name="default_eval">
-               	 <displayName>The default Value as an eval string</displayName>
-               <value>I2CE_Date::blank()</value>
+            <configurationGroup name="swelling">
+              <displayName>The field 'swelling'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
               </configuration>
-          </configurationGroup>
-
-            <configurationGroup name="year">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Year of Graduation</value>
-              </configuration>
-		<configuration name="default_eval">
-               	 <displayName>The default Value as an eval string</displayName>
-               <value>I2CE_Date::blank()</value>
+                <value>default:Swelling</value>
               </configuration>
             </configurationGroup>
-            <configurationGroup name="major">
+            <configurationGroup name="infection">
+              <displayName>The field 'infection'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
-                <value>default:Major</value>
+                <value>default:Infection</value>
               </configuration>
             </configurationGroup>
-          </configurationGroup>
+            <configurationGroup name="wound_delay">
+              <displayName>The field 'wound_delay'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Delayed Wound Healing</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="appearance">
+              <displayName>The field 'appearance'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Appearance</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="urinate_problem">
+              <displayName>The field 'urinate_problem'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Problems with Urinating</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="skin_torsion">
+              <displayName>The field 'skin_torsion'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Torsion to Skin</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="erectile_dysfunction">
+              <displayName>The field 'erectile_dysfunction'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Erective Dysfunction</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="psycho_behavior">
+              <displayName>The field 'psycho_behavior'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Psychobehavioral Problems</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="anesthetic">
+              <displayName>The field 'anesthetic'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Anesthetic Related Event</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="ex_bleeding">
+              <displayName>The field 'ex_bleeding'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Excessive Bleeding</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="ex_skin_removed">
+              <displayName>The field 'ex_skin_removed'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Excessive Skin Removed</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="penis_damage">
+              <displayName>The field 'penis_damage'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Damage to Penis</value>
+              </configuration>
+            </configurationGroup>     
+          </configurationGroup>  
         </configurationGroup>
-      
       </configurationGroup>
       <!-- enf of formclasses-->
     </configurationGroup>
-	<configurationGroup name="page">
-      <configurationGroup name="prof_education">
-        <displayName>Professional Education Page</displayName>
-        <description>The page 'professional education' which has the action of: Add/Update Professional Education History</description>
+    <configurationGroup name="formData" path="/I2CE/formsData/forms">
+      <displayName>Forms Data</displayName>
+      <description>Form data saved in magic data</description>
+      <configurationGroup name="hiv_testresults">
+        <displayName>HIV Test Results</displayName>
+        <description>The hiv_testresults form data</description>
+        <configurationGroup name="P">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Positive</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="N">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Negative</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="reference">
+        <displayName>Client Referred to</displayName>
+        <description>The reference form data</description>
+        <configurationGroup name="st">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>STI</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="ar">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>ART Clinic</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="su">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Other Surgical</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="no">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Client Not Referred</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      
+      </configurationGroup>
+      <configurationGroup name="visit">
+        <displayName>Client's Visits to Center</displayName>
+        <description>The visit form data</description>
+        <configurationGroup name="pr">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>First Visit</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="de">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Second Visit</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="tr">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Third Visit</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="pain">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="ins_skin_removed">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="swelling">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="infection">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="wound_delay">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="appearance">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="urinate_problem">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="skin_torsion">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="erectile_dysfunction">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="psycho_behavior">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="anesthetic">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="ex_bleeding">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    
+      <configurationGroup name="ex_skin_removed">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    
+      <configurationGroup name="penis_damage">
+        <configurationGroup name="m">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Moderate</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="s">
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <configuration name="name">
+              <value>Severe</value>
+            </configuration>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    
+    </configurationGroup>
+    <configurationGroup name="page">
+      <configurationGroup name="risk_reduction">
+        <displayName>Risk Reduction Page</displayName>
+        <description>The page 'professional education' which has the action of: MC&amp;Risk Reduction Data</description>
         <configuration name="style" values="single">
           <displayName>Page Style</displayName>
           <description>The Page Style</description>
@@ -508,16 +1234,147 @@
             <displayName>Page Title</displayName>
             <description>Page Title</description>
             <status>required:true</status>
-            <value>Add/Update Professional Education History</value>
+            <value>Add/Update MC and Risk Reduction Information</value>
           </configuration>
           <configuration name="page_form" values="single">
             <displayName>Form</displayName>
             <description>The form this page is using</description>
             <status>required:true</status>
-            <value>prof_education</value>
+            <value>risk_reduction</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
+    
+      <configurationGroup name="medical_history">
+        <displayName>Medical History Page</displayName>
+        <description>The page 'medical_history' which has the action of: Add/Update Medical History Information</description>
+        <configuration name="style" values="single">
+          <displayName>Page Style</displayName>
+          <description>The Page Style</description>
+          <value>ihris_common_page_form_parent_person</value>
+        </configuration>
+        <configurationGroup name="args">
+          <displayName>Page Options</displayName>
+          <description>The options that control the access and display of all pages</description>
+          <configuration name="title" values="single" locale="en_US">
+            <displayName>Page Title</displayName>
+            <description>Page Title</description>
+            <status>required:true</status>
+            <value>Add/Update Medical History Data</value>
+          </configuration>
+          <configuration name="page_form" values="single">
+            <displayName>Form</displayName>
+            <description>The form this page is using</description>
+            <status>required:true</status>
+            <value>medical_history</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    
+      <configurationGroup name="physical_exam">
+        <displayName>Physical Exam Page</displayName>
+        <description>The page 'physical_exam' which has the action of: Add/Update Physical Examination Data</description>
+        <configuration name="style" values="single">
+          <displayName>Page Style</displayName>
+          <description>The Page Style</description>
+          <value>ihris_common_page_form_parent_person</value>
+        </configuration>
+        <configurationGroup name="args">
+          <displayName>Page Options</displayName>
+          <description>The options that control the access and display of all pages</description>
+          <configuration name="title" values="single" locale="en_US">
+            <displayName>Page Title</displayName>
+            <description>Page Title</description>
+            <status>required:true</status>
+            <value>Add/Update Physical Examination Data</value>
+          </configuration>
+          <configuration name="page_form" values="single">
+            <displayName>Form</displayName>
+            <description>The form this page is using</description>
+            <status>required:true</status>
+            <value>physical_exam</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    
+      <configurationGroup name="mc_procedure">
+        <displayName>MC Procedure Page</displayName>
+        <description>The page 'professional education' which has the action of: Add/Update MC Procedure Page</description>
+        <configuration name="style" values="single">
+          <displayName>Page Style</displayName>
+          <description>The Page Style</description>
+          <value>ihris_common_page_form_parent_person</value>
+        </configuration>
+        <configurationGroup name="args">
+          <displayName>Page Options</displayName>
+          <description>The options that control the access and display of all pages</description>
+          <configuration name="title" values="single" locale="en_US">
+            <displayName>Page Title</displayName>
+            <description>Page Title</description>
+            <status>required:true</status>
+            <value>Add/Update MC Procedure Data</value>
+          </configuration>
+          <configuration name="page_form" values="single">
+            <displayName>Form</displayName>
+            <description>The form this page is using</description>
+            <status>required:true</status>
+            <value>mc_procedure</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    
+      <configurationGroup name="adverse_event">
+        <displayName>Adverse Event Page</displayName>
+        <description>The page 'adverse event' which has the action of: Add/Update Adverse Event Data</description>
+        <configuration name="style" values="single">
+          <displayName>Page Style</displayName>
+          <description>The Page Style</description>
+          <value>ihris_common_page_form_parent_person</value>
+        </configuration>
+        <configurationGroup name="args">
+          <displayName>Page Options</displayName>
+          <description>The options that control the access and display of all pages</description>
+          <configuration name="title" values="single" locale="en_US">
+            <displayName>Page Title</displayName>
+            <description>Page Title</description>
+            <status>required:true</status>
+            <value>Add/Update Adverse Event Data</value>
+          </configuration>
+          <configuration name="page_form" values="single">
+            <displayName>Form</displayName>
+            <description>The form this page is using</description>
+            <status>required:true</status>
+            <value>adverse_event</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    
+      <configurationGroup name="followup_notes">
+        <displayName>Professional Education Page</displayName>
+        <description>The page 'professional education' which has the action of: Add/Update Followup Notes Info</description>
+        <configuration name="style" values="single">
+          <displayName>Page Style</displayName>
+          <description>The Page Style</description>
+          <value>ihris_common_page_form_parent_person</value>
+        </configuration>
+        <configurationGroup name="args">
+          <displayName>Page Options</displayName>
+          <description>The options that control the access and display of all pages</description>
+          <configuration name="title" values="single" locale="en_US">
+            <displayName>Page Title</displayName>
+            <description>Page Title</description>
+            <status>required:true</status>
+            <value>Add/Update Followup Notes Info</value>
+          </configuration>
+          <configuration name="page_form" values="single">
+            <displayName>Form</displayName>
+            <description>The form this page is using</description>
+            <status>required:true</status>
+            <value>followup_notes</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    
     </configurationGroup>
     <!-- end of page-->
   </configurationGroup>
