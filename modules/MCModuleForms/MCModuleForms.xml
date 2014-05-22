@@ -226,6 +226,11 @@
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
           </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
+          </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
             <description>The display name for this form</description>
@@ -239,6 +244,11 @@
             <displayName>Class Name</displayName>
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
           </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
@@ -254,6 +264,11 @@
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
           </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
+          </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
             <description>The display name for this form</description>
@@ -267,6 +282,11 @@
             <displayName>Class Name</displayName>
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
           </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
@@ -282,6 +302,11 @@
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
           </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
+          </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
             <description>The display name for this form</description>
@@ -295,6 +320,11 @@
             <displayName>Class Name</displayName>
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
           </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
@@ -310,6 +340,11 @@
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
           </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
+          </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
             <description>The display name for this form</description>
@@ -323,6 +358,11 @@
             <displayName>Class Name</displayName>
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
           </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
@@ -338,6 +378,11 @@
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
           </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
+          </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
             <description>The display name for this form</description>
@@ -351,6 +396,11 @@
             <displayName>Class Name</displayName>
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
           </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
@@ -366,6 +416,11 @@
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
           </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
+          </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
             <description>The display name for this form</description>
@@ -379,6 +434,11 @@
             <displayName>Class Name</displayName>
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
           </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
@@ -394,6 +454,11 @@
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
           </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
+          </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
             <description>The display name for this form</description>
@@ -407,6 +472,11 @@
             <displayName>Class Name</displayName>
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
           </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
@@ -422,6 +492,11 @@
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
           </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
+          </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
             <description>The display name for this form</description>
@@ -435,6 +510,11 @@
             <displayName>Class Name</displayName>
             <description>The name of the class providing the form</description>
             <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
           </configuration>
           <configuration name="display" values="single" locale="en_US">
             <displayName>Display name</displayName>
