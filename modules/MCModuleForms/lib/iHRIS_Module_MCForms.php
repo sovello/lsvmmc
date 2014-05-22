@@ -35,7 +35,7 @@ class iHRIS_Module_MCForms extends I2CE_Module {
             'iHRIS_PageView->action_risk_reduction' => 'action_risk_reduction',
             'iHRIS_PageView->action_medical_history' => 'action_medical_history',
             'iHRIS_PageView->action_physical_exam' => 'action_physical_exam',
-            'iHRIS_PageView->action_mc_procedure' => '->action_mc_procedure',
+            'iHRIS_PageView->action_mc_procedure' => 'action_mc_procedure',
             'iHRIS_PageView->action_adverse_event' => 'action_adverse_event',
             'iHRIS_PageView->action_followup_notes' => 'action_followup_notes'
             );

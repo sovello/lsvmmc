@@ -8,7 +8,7 @@
     <creator>Sovello Hildebrand</creator>
     <email>sovellohpmgani@gmail.com</email>
     <link>https://github.com/sovello/lsvmmc</link>
-    <version>4.1.10</version>
+    <version>4.1.10.1</version>
     <path name="configs">
       <value>./configs</value>
     </path>
@@ -129,16 +129,110 @@
         <value>60</value>
       </configuration>
     </configurationGroup>
+    <configurationGroup name="page">
+      <displayName>Pages</displayName>
+      <description>Information about various pages made available by the system</description>
+      <status>required:true</status>
+      <version>4.1.10.1</version>
+      <configurationGroup name="feedback">
+        <displayName>Feedback Page</displayName>
+        <description>The page 'feedback' which has the action of: Send Feedback</description>
+        <configuration name="style" values="single">
+          <displayName>Page Style</displayName>
+          <description>The Page Style</description>
+          <value>shell</value>
+        </configuration>
+        <configurationGroup name="args">
+          <displayName>Page Options</displayName>
+          <description>The options that control the access and display of all pages</description>
+          <configuration name="title" values="single" locale="en_US">
+            <displayName>Page Title</displayName>
+            <description>Page Title</description>
+            <status>required:true</status>
+            <value>Send Feedback</value>
+          </configuration>
+          <configuration name="defaultHTMLFile" values="many">
+            <displayName>Default HTML File</displayName>
+            <description>The default HTML File for this page</description>
+            <status>required:false</status>
+            <value>feedback.html</value>
+          </configuration>
+          <configuration name="access" values="many">
+            <displayName>Page Access</displayName>
+            <description>All of the roles that have access to this page</description>
+            <status>required:false</status>
+            <value>any</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="view">
+        <displayName>View Page</displayName>
+        <description>The page 'view' which has the action of: View Person</description>
+        <configuration name="class" values="single">
+          <displayName>Page Class</displayName>
+          <description>The class responsible for displaying this page</description>
+          <status>required:true</status>
+          <value>iHRIS_PageView</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name="manage">
+        <displayName>Manage Page</displayName>
+        <description>The page 'manage' which has the action of: Manage People</description>
+        <configuration name="class" values="single">
+          <displayName>Page Class</displayName>
+          <description>The class responsible for displaying this page</description>
+          <status>required:true</status>
+          <value>iHRIS_PageManage</value>
+        </configuration>
+        <configuration name="style" values="single">
+          <displayName>Page Style</displayName>
+          <description>The Page Style</description>
+          <value>shell</value>
+        </configuration>
+        <configurationGroup name="args">
+          <displayName>Page Options</displayName>
+          <description>The options that control the access and display of all pages</description>
+          <configuration name="title" values="single" locale="en_US">
+            <displayName>Page Title</displayName>
+            <description>Page Title</description>
+            <status>required:true</status>
+            <value>Manage Clients</value>
+          </configuration>
+          <configuration name="defaultHTMLFile" values="many">
+            <displayName>Default HTML File</displayName>
+            <description>The default HTML File for this page</description>
+            <status>required:true</status>
+            <value>manage.html</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="user">
+        <displayName>User Page</displayName>
+        <description>The page 'user' which has the action of: Manage Users/Access</description>
+        <configuration name="class" values="single">
+          <displayName>Page Class</displayName>
+          <description>The class responsible for displaying this page</description>
+          <status>required:true</status>
+          <value>iHRIS_PageFormUser</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
     <configurationGroup name="template">
       <displayName>Template Information</displayName>
       <description>Various Default Information About The Templating System</description>
-      <status>advanced:false</status>
-      <status>required:true</status>
-      <configuration name="prefix_title" values="single" locale="en_US">
-        <displayName>Page title prefix</displayName>
-        <description>Page titile prefix</description>
-        <value>iHRIS Manage</value>
-      </configuration>
+      <configurationGroup name="page_styles">
+        <displayName>Page Style</displayName>
+        <description>Various Page styles with their default templates</description>
+        <status>required:false</status>
+        <configurationGroup name="ihris_vmmc_page_form_parent_person">
+          <displayName>Page Form Parent Person</displayName>
+          <configuration name="style" values="single">
+            <displayName>Page Style</displayName>
+            <description>The page style that this style inherits from</description>
+            <value>ihris_common_page_form_parent_person</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
     </configurationGroup>
     <configurationGroup name="pdf_options" path="/modules/report-pdf/PDF/display-options">
       <displayName>PDF Options</displayName>
