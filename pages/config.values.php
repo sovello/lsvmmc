@@ -71,7 +71,7 @@ $i2ce_site_user_access_init = null;
  * the configuration xml file for the site module.  You need to set this.
  */
 
-$i2ce_site_module_config = "/var/lib/iHRIS/vmmc/blank/iHRIS-Manage-BLANK.xml";
+$i2ce_site_module_config = "/var/lib/iHRIS/sites/VMMC/iHRIS-VMMC-LS.xml";
 
 
 /*****************************************************************
