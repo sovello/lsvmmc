@@ -63,6 +63,14 @@
       <atLeast version="4.1" />
       <lessThan version="4.2" />
     </requirement>
+    <requirement name="VMMCPerson">
+      <atLeast version="4.1" />
+      <lessThan version="4.2" />
+    </requirement>
+    <requirement name="magicDataBrowser">
+      <atLeast version="4.1" />
+      <lessThan version="4.2" />
+    </requirement>
     <enable name="PersonNotes" />
     <enable name="PersonPassportPhoto" />
     <enable name="default-locales" />
