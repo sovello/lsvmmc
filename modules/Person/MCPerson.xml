@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="VMMCPerson">
+  <metadata>
+    <displayName>MC Person Customizations</displayName>
+    <category>MC Modules</category>
+    <description>Modifications to the person form</description>
+    <creator>Sovello Hildebrand</creator>
+    <email>sovellohpmgani@gmail.com</email>
+    <link>https://github.com/makhatemakhate/VMMC</link>
+    <version>4.1.10.1</version>
+    <path name="templates">
+      <value>./templates</value>
+    </path>
+    <path name="classes">
+      <value>./lib</value>
+    </path>
+    <priority>350</priority>
+  </metadata>
+  <configurationGroup name="VMMCPerson" path="/I2CE">
+    <configurationGroup name="forms" path="/modules/forms">
+      <configurationGroup name="forms">
+        <!--child forms for person-->
+        <configurationGroup name="person">
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>iHRIS_VMMC_Person</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>MC Client</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="formClasses">
+        <configurationGroup name="iHRIS_VMMC_Person">
+          <configuration name="extends">
+            <displayName>The class this form extends</displayName>
+            <value>iHRIS_Person</value>
+          </configuration>
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="patient_number">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Patient number</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <version>4.1.10.1</version>
+                <value>INT_GENERATE</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="facility">
+              <displayName>The field 'facility'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                   <value>default:Health Facility</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="visit_date">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Date of Visit</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <value>DATE_YMD</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+        <configurationGroup name="iHRIS_Person">
+          <configurationGroup name="fields">
+            <configurationGroup name="surname">
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>false</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="firstname">
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>false</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="nationality">
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>false</value>
+              </configuration>
+              <configuration name="in_db" type="boolean">
+                <displayName>This field needs to be saved in the database</displayName>
+                <value>false</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="residence">
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>false</value>
+              </configuration>
+              <configuration name="in_db" type="boolean">
+                <displayName>This field needs to be saved in the database</displayName>
+                <value>false</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+      </configurationGroup>
+      <!-- enf of formclasses-->
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>
