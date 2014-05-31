@@ -9,7 +9,7 @@
     <creator>Sovello Hildebrand</creator>
     <email>sovellohpmgani@gmail.com</email>
     <link>https://github.com/makhatemakhate/VMMC</link>
-    <version>4.1.10.0</version>
+    <version>4.1.10.1</version>
     <path name="templates">
       <value>./templates</value>
     </path>
@@ -531,10 +531,22 @@
           </configuration>
           <configurationGroup name="fields">
             <displayName>The fields defined for this form</displayName>
+            <version>4.1.10.1</version>
             <configurationGroup name="hiv_tested">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
                 <value>default:Client Tested for HIV today?</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="onsite_testing">
+              <version>4.1.10.1</version>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:On-site testing?</value>
               </configuration>
               <configuration name="formfield">
                 <displayName>THe form field type</displayName>
@@ -556,7 +568,6 @@
                 <value>I2CE_Date::blank()</value>
               </configuration>
             </configurationGroup>
-            
             <configurationGroup name="hiv_testresults">
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
@@ -841,8 +852,25 @@
                 <value>default:Visit</value>
               </configuration>
               <configuration name="formfield">
-                <displayName>THe form field type</displayName>
-                <value>YESNO</value>
+                <displayName>The form field type</displayName>
+                <version>4.1.10.1</version>
+                <value>MAP</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="visit_date">
+              <displayName>The field 'visit_date'</displayName>
+              <version>4.1.10.1</version>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>DATE_YMD</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                   <value>default:Visit Date</value>
+              </configuration>
+              <configuration name="default_eval">
+                <displayName>The default Value as an eval string</displayName>
+                <value>I2CE_Date::now()</value>
               </configuration>
             </configurationGroup>
             <configurationGroup name="pain">
