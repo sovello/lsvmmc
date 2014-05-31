@@ -8,13 +8,16 @@
     <creator>Sovello Hildebrand</creator>
     <email>sovellohpmgani@gmail.com</email>
     <link>https://github.com/makhatemakhate/VMMC</link>
-    <version>4.1.10.1</version>
+    <version>4.1.10.2</version>
     <path name="templates">
       <value>./templates</value>
     </path>
     <path name="classes">
       <value>./lib</value>
     </path>
+    <requirement name="Facility">
+      <atLeast version="4.1" />
+    </requirement>
     <priority>350</priority>
   </metadata>
   <configurationGroup name="VMMCPerson" path="/I2CE">
@@ -55,9 +58,11 @@
             </configurationGroup>
             <configurationGroup name="facility">
               <displayName>The field 'facility'</displayName>
+              <version>4.1.10.2</version>
               <configuration name="formfield">
                 <displayName>The form field type</displayName>
-                <value>STRING_LINE</value>
+                <version>4.1.10.2</version>
+                <value>MAP</value>
               </configuration>
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
@@ -77,16 +82,36 @@
           </configurationGroup>
         </configurationGroup>
         <configurationGroup name="iHRIS_Person">
+          <version>4.1.10.2</version>
           <configurationGroup name="fields">
             <configurationGroup name="surname">
+              <version>4.1.10.2</version>
               <configuration name="required" type="boolean">
                 <displayName>This field is required to be set</displayName>
                 <value>false</value>
               </configuration>
+              <configuration name="in_db" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <version>4.1.10.2</version>
+                <value>false</value>
+              </configuration>
             </configurationGroup>
             <configurationGroup name="firstname">
+              <version>4.1.10.2</version>
               <configuration name="required" type="boolean">
                 <displayName>This field is required to be set</displayName>
+                <value>false</value>
+              </configuration>
+              <configuration name="in_db" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <version>4.1.10.2</version>
+                <value>false</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="othername">
+              <configuration name="in_db" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <version>4.1.10.2</version>
                 <value>false</value>
               </configuration>
             </configurationGroup>
