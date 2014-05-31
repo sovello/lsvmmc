@@ -33,6 +33,8 @@ class iHRIS_Module_MCForms extends I2CE_Module {
     public static function getMethods() {
         return array(
             'iHRIS_PageView->action_risk_reduction' => 'action_risk_reduction',
+            'iHRIS_PageView->action_tb_screening' => 'action_tb_screening',
+            'iHRIS_PageView->action_referral_linkages' => 'action_referral_linkages',
             'iHRIS_PageView->action_medical_history' => 'action_medical_history',
             'iHRIS_PageView->action_physical_exam' => 'action_physical_exam',
             'iHRIS_PageView->action_mc_procedure' => 'action_mc_procedure',
@@ -47,6 +49,20 @@ class iHRIS_Module_MCForms extends I2CE_Module {
             return;
         }
         return $obj->addChildForms('risk_reduction', 'siteContent');
+    }
+    
+    public function action_tb_screening($obj) {
+        if (!$obj instanceof iHRIS_PageView) {
+            return;
+        }
+        return $obj->addChildForms('tb_screening', 'siteContent');
+    }
+    
+    public function action_referral_linkages($obj) {
+        if (!$obj instanceof iHRIS_PageView) {
+            return;
+        }
+        return $obj->addChildForms('referral_linkages', 'siteContent');
     }
 
 

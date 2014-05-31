@@ -9,7 +9,7 @@
     <creator>Sovello Hildebrand</creator>
     <email>sovellohpmgani@gmail.com</email>
     <link>https://github.com/makhatemakhate/VMMC</link>
-    <version>4.1.10.1</version>
+    <version>4.1.10.3</version>
     <path name="templates">
       <value>./templates</value>
     </path>
@@ -124,7 +124,10 @@
           <configurationGroup name="meta">
             <configuration name="child_forms" values="many">
               <status>uniquemerge:true</status>
+              <version>4.1.10.2</version>
               <value>risk_reduction</value>
+              <value>referral_linkages</value>
+              <value>tb_screening</value>
               <value>medical_history</value>
               <value>physical_exam</value>
               <value>mc_procedure</value>
@@ -148,6 +151,39 @@
             <value>MC&amp;Risk Reducation</value>
           </configuration>
         </configurationGroup>
+        
+        <configurationGroup name="referral_linkages">
+          <displayName>Referral and Linkages</displayName>
+          <description>Referral and Linkages Form</description>
+          <version>4.1.10.2</version>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>VMMC_ReferralLinkages</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Referral and Linkages</value>
+          </configuration>
+        </configurationGroup>
+        
+        <configurationGroup name="tb_screening">
+          <displayName>TB Screening</displayName>
+          <description>The TB Screening Form</description>
+          <version>4.1.10.2</version>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>VMMC_TBScreening</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>TB Screening</value>
+          </configuration>
+        </configurationGroup>
+        
         <configurationGroup name="medical_history">
           <displayName>Medical History</displayName>
           <description>The Patient's Medical History Form</description>
@@ -524,6 +560,7 @@
         </configurationGroup>  
       </configurationGroup>
       <configurationGroup name="formClasses">
+        <version>4.1.10.2</version>
         <configurationGroup name="VMMC_RiskReduction">
           <configuration name="extends">
             <displayName>The class this form extends</displayName>
@@ -840,6 +877,100 @@
             </configurationGroup>
           </configurationGroup>
         </configurationGroup>
+        <configurationGroup name="VMMC_ReferralLinkages">
+          <version>4.1.10.2</version>
+          <configuration name="extends">
+            <value>I2CE_Form</value>
+          </configuration>
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="cdf_count">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:CD4 Count Results</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <value>FLOAT</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="pre_art">
+              <displayName>The field 'pre_art'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                   <value>default:Pre ART</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="art">
+              <displayName>The field 'art'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                   <value>default:ART</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+        <configurationGroup name="VMMC_TBScreening">
+          <version>4.1.10.2</version>
+          <configuration name="extends">
+            <value>I2CE_Form</value>
+          </configuration>
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="coughing">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Are you coughing?</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="weight_loss">
+              <displayName>The field 'weight_loss'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                   <value>default:Have you lost weight?</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="drenching">
+              <displayName>The field 'drenching'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                   <value>default:Do you have drenching?</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="fever">
+              <displayName>The field 'fever'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                   <value>default:Do you have fever?</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+        
         <configurationGroup name="VMMC_FollowupNotes">
           <configuration name="extends">
             <value>I2CE_Form</value>
@@ -1029,6 +1160,7 @@
             </configurationGroup>     
           </configurationGroup>  
         </configurationGroup>
+      
       </configurationGroup>
       <!-- enf of formclasses-->
     </configurationGroup>
@@ -1376,6 +1508,7 @@
     
     </configurationGroup>
     <configurationGroup name="page">
+      <version>4.1.10.3</version>
       <configurationGroup name="risk_reduction">
         <displayName>Risk Reduction Page</displayName>
         <description>The page 'professional education' which has the action of: MC&amp;Risk Reduction Data</description>
@@ -1398,6 +1531,60 @@
             <description>The form this page is using</description>
             <status>required:true</status>
             <value>risk_reduction</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    
+      <configurationGroup name="referral_linkages">
+        <displayName>Risk Reduction Page</displayName>
+        <description>The page 'professional education' which has the action of:  Referral and Linkages Data</description>
+        <version>4.1.10.3</version>
+        <configuration name="style" values="single">
+          <displayName>Page Style</displayName>
+          <description>The Page Style</description>
+          <value>ihris_common_page_form_parent_person</value>
+        </configuration>
+        <configurationGroup name="args">
+          <displayName>Page Options</displayName>
+          <description>The options that control the access and display of all pages</description>
+          <configuration name="title" values="single" locale="en_US">
+            <displayName>Page Title</displayName>
+            <description>Page Title</description>
+            <status>required:true</status>
+            <value>Add/Update Referral and Linkages Information</value>
+          </configuration>
+          <configuration name="page_form" values="single">
+            <displayName>Form</displayName>
+            <description>The form this page is using</description>
+            <status>required:true</status>
+            <value>referral_linkages</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    
+      <configurationGroup name="tb_screening">
+        <displayName>Risk Reduction Page</displayName>
+        <description>The page 'professional education' which has the action of: TB Screening</description>
+        <version>4.1.10.3</version>
+        <configuration name="style" values="single">
+          <displayName>Page Style</displayName>
+          <description>The Page Style</description>
+          <value>ihris_common_page_form_parent_person</value>
+        </configuration>
+        <configurationGroup name="args">
+          <displayName>Page Options</displayName>
+          <description>The options that control the access and display of all pages</description>
+          <configuration name="title" values="single" locale="en_US">
+            <displayName>Page Title</displayName>
+            <description>Page Title</description>
+            <status>required:true</status>
+            <value>Add/Update TB Screening Information</value>
+          </configuration>
+          <configuration name="page_form" values="single">
+            <displayName>Form</displayName>
+            <description>The form this page is using</description>
+            <status>required:true</status>
+            <value>tb_screening</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
