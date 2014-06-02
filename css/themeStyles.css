@@ -1,6 +1,7 @@
 /* Main Background Color ------------------------ */
 body {
-	background-color: #467495;
+	/* background-color: #467495; */
+	background-color: #ffd500; /*--orange--*/
 }
 
 /* Page Header and subheads --------------------- */
@@ -33,7 +34,9 @@ a:visited:hover {
 
 /* site banner name colors --------------------- */
 #siteHeader p#siteName {
-	color: #09345f;
+	color: #00bcf3; /*--was--09345f--before--*/
+	font-size: 450%; /* new */
+	font-weight: 900; /* new */
 }
 #siteHeader p#siteTag {
 	color: #a1bdd2;
@@ -42,31 +45,32 @@ a:visited:hover {
 /* Horizontal NavBar --------------------------- */
 
 #inlineNavBar {
-	background-color: #7b9f0e;
+	/* background-color: #7b9f0e; */
+	background-color: #f16c27; /*--maroon--*/
 }
 #inlineNavBar ul li a {
 	color: #fff;
-	border-right-color: #5d8108;
+	border-right-color: #ffd500; /* was 5d8108. this is the border between buttons */
 }
 
 #inlineNavBar ul li a:hover {
 	color: #fff;
-	background-color: #4b6f06;
+	background-color: #11b8ed; /* color on hovering mouse*/
 }
 
 #inlineNavBar ul li a.active,
 #inlineNavBar ul li a.active:hover {
-	color: #5d8108;
+	color: #e11f1f; /* #5d8108 */
 }
 #inlineNavBar ul#sysUser li a:hover {
-	background-color: #406002;
+	background-color: #11b8ed; /* was 406002 before */
 }
 
 #inlineNavBar ul#sysUser li a {
-	border-left-color: #446504;
+	border-left-color: #701414; /* 446504 */
 }
 
-/* laft-hand NavBar ---------------------------- */
+/* left-hand NavBar ---------------------------- */
 #navBar li a {
 	color: #333;
 	border-bottom-color: #e0e0e0;
