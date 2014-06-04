@@ -28,6 +28,9 @@
       <atLeast version="4.1" />
       <lessThan version="4.2" />
     </requirement>
+    <requirement name="CustomReports_CrossTab">
+      <atLeast version="4.1" />
+    </requirement>
     <requirement name="PrintedForms">
       <atLeast version="4.1" />
       <lessThan version="4.2" />

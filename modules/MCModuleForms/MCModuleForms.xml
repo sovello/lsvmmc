@@ -16,6 +16,9 @@
     <path name="classes">
       <value>./lib</value>
     </path>
+    <requirement name="Float">
+      <atLeast version="4.1" />
+    </requirement>
     <priority>350</priority>
   </metadata>
   <configurationGroup name="MCModuleForms" path="/I2CE">
