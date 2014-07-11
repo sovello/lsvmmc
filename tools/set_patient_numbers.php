@@ -78,6 +78,7 @@ foreach( $facList as $facId => $name){
     )
   );
   $clients = I2CE_FormStorage::search('person',false,$where);
+  print_r($clients);
   $i=1;
   foreach($clients as $key=>$id){
       $patientNum = $name.'-'.$i;
@@ -85,9 +86,9 @@ foreach( $facList as $facId => $name){
       echo "Facility is facility $facId\n";
       $demoObj = $ff->createContainer('person|'.$id);
       $demoObj->populate();
-      $demoObj->getField('patient_number')->setValue($patientNum);
-      //$demoObj->save($user);
-      //$demoObj->cleanup();
+      $demoObj->patient_number = $patientNum;
+      $demoObj->save($user);
+      $demoObj->cleanup();
       $i++;
   }
 }

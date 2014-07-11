@@ -8,7 +8,7 @@
     <creator>Sovello Hildebrand</creator>
     <email>sovellohpmgani@gmail.com</email>
     <link>https://github.com/makhatemakhate/VMMC</link>
-    <version>4.1.10.3</version>
+    <version>4.1.10.4</version>
     <path name="templates">
       <value>./templates</value>
     </path>
@@ -54,6 +54,16 @@
                 <displayName>THe form field type</displayName>
                 <version>4.1.10.3</version>
                 <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="unique" type="boolean">
+                <displayName>This field is required to be unique</displayName>
+                <version>4.1.10.4</version>
+                <value>true</value>
+              </configuration>
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <version>4.1.10.4</version>
+                <value>true</value>
               </configuration>
             </configurationGroup>
             <configurationGroup name="facility">

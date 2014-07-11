@@ -9,7 +9,7 @@
     <creator>Sovello Hildebrand</creator>
     <email>sovellohpmgani@gmail.com</email>
     <link>https://github.com/makhatemakhate/VMMC</link>
-    <version>4.1.10.3</version>
+    <version>4.1.10.4</version>
     <path name="templates">
       <value>./templates</value>
     </path>
@@ -333,6 +333,28 @@
             <value>Anesthetic Pain Level</value>
           </configuration>
         </configurationGroup>
+        
+        <configurationGroup name="infection">
+          <displayName>Infection</displayName>
+          <description>The Infection Form</description>
+          <version>4.1.10.4</version>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>I2CE_SimpleList</value>
+          </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>Infection</value>
+          </configuration>
+        </configurationGroup>
+        
         <configurationGroup name="ex_bleeding">
           <displayName>Excessive Bleeding</displayName>
           <description>The Excessive Bleeding Form</description>
