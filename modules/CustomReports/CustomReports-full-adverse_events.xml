@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="VMMCReports">
+  <metadata>
+    <displayName>VMMC Reports</displayName>
+    <description>Reports for VMMC</description>
+    <version>4.1.0</version>
+    <path name="modules">
+      <value>./modules</value>
+    </path>
+    <requirement name="CustomReports-full-adverse_events">
+      <atLeast version="4.0" />
+    </requirement>
+    <requirement name="CustomReports-full-all_clients">
+      <atLeast version="4.0" />
+    </requirement>
+    <requirement name="CustomReports-full-followup_clients">
+      <atLeast version="4.0" />
+    </requirement>
+    <requirement name="CustomReports-full-hiv_status">
+      <atLeast version="4.0" />
+    </requirement>
+    <requirement name="CustomReports-full-referred_clients">
+      <atLeast version="4.0" />
+    </requirement>
+    <requirement name="CustomReports-full-search_clients">
+      <atLeast version="4.0" />
+    </requirement>
+  </metadata>
+</I2CEConfiguration>

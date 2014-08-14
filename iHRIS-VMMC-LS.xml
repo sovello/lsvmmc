@@ -74,6 +74,10 @@
       <atLeast version="4.1" />
       <lessThan version="4.2" />
     </requirement>
+    <requirement name="VMMCReports">
+      <atLeast version="4.1" />
+      <lessThan version="4.2" />
+    </requirement>
     <requirement name="magicDataBrowser">
       <atLeast version="4.1" />
       <lessThan version="4.2" />
