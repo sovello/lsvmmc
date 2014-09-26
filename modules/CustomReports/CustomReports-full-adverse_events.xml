@@ -3,6 +3,7 @@
 <I2CEConfiguration name="VMMCReports">
   <metadata>
     <displayName>VMMC Reports</displayName>
+    <category>MC Modules</category>
     <description>Reports for VMMC</description>
     <version>4.1.0</version>
     <path name="modules">

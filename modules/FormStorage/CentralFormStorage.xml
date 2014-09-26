@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="FormStorageVMMC">
+  <metadata>
+    <displayName>VMMC Form Storages</displayName>
+    <category>MC Modules</category>
+    <description>Form Storage mechanism for VMMC Central Site</description>
+    <creator>Sovello Hildebrand</creator>
+    <email>sovellohpmgani@gmail.com</email>
+    <version>4.1.9.1</version>
+  </metadata>
+  <configurationGroup name='FormStorageVMMC' path='/'>
+    <configurationGroup name='form_storage' path='/modules/forms/forms'>
+      <configuration name='multi_flat_componentized'   path='/modules/forms/storage_options/multi_flat/componentized'>
+        <value>1</value>
+      </configuration>
+      <configurationGroup name='multi_flat_components' path='/modules/forms/storage_options/multi_flat/components'>
+        <configuration name='vmmc_one' values='many' type='delimited'>
+         <value>database:copy_vmmc</value>
+        </configuration><!--
+        <configuration name='user_two' values='many' type='delimited'>
+        <value>database:user_two</value>
+        </configuration>-->
+      </configurationGroup>
+      <configurationGroup name='person'>
+        <configuration name='storage'>
+          <value>multi_flat</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name='adverse_event'>
+        <configuration name='storage'>
+          <value>multi_flat</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name='followup_notes'>
+        <configuration name='storage'>
+          <value>multi_flat</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name='demographic'>
+        <configuration name='storage'>
+          <value>multi_flat</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name='mc_procedure'>
+        <configuration name='storage'>
+          <value>multi_flat</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name='person_id'>
+        <configuration name='storage'>
+          <value>multi_flat</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name='physical_exam'>
+        <configuration name='storage'>
+          <value>multi_flat</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name='oersib_photo_passport'>
+        <configuration name='storage'>
+          <value>multi_flat</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name='referral_linkages'>
+        <configuration name='storage'>
+          <value>multi_flat</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name='risk_reduction'>
+        <configuration name='storage'>
+          <value>multi_flat</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name='tb_screening'>
+        <configuration name='storage'>
+          <value>multi_flat</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>
