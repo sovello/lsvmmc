@@ -136,7 +136,8 @@ class iHRIS_Module_MCForms extends I2CE_Module {
             ); 
             $mcproc = I2CE_FormStorage::listFields('mc_procedure', array('procedure_date'), false, $mcProcedure);
             $mcprocdata = current($mcproc);
-            $procdate = $this->getdate($mcprocdata['procedure_date']);
+            //$procdate = $this->getdate($mcprocdata['procedure_date']);
+            $procdate = $mcprocdata['procedure_date'];
          $datePr = new DateTime($procdate);
         $dateSec = new DateTime($form->getField('visit_date')->getDBValue());
         if($datePr > $dateSec){ 
