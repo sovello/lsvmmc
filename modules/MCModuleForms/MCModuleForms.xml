@@ -9,7 +9,7 @@
     <creator>Sovello Hildebrand</creator>
     <email>sovellohpmgani@gmail.com</email>
     <link>https://github.com/makhatemakhate/VMMC</link>
-    <version>4.1.10.4</version>
+    <version>4.1.10.5</version>
     <path name="templates">
       <value>./templates</value>
     </path>
@@ -916,7 +916,8 @@
               </configuration>
               <configuration name="formfield">
                 <displayName>THe form field type</displayName>
-                <value>FLOAT</value>
+                <version>4.1.10.5</version>
+                <value>INT</value>
               </configuration>
             </configurationGroup>
             <configurationGroup name="pre_art">
@@ -1209,6 +1210,15 @@
           </configuration>
           <configuration name="fields" value="many" type="delimited" locale="en_US">
             <value>name:Negative</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="U">
+          <version>4.1.10.5</version>
+          <configuration name="last_modified">
+            <value>2014-05-20 17:00:00</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <value>name:Unknown</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>

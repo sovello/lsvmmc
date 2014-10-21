@@ -8,7 +8,7 @@
     <creator>Sovello Hildebrand</creator>
     <email>sovellohpmgani@gmail.com</email>
     <link>https://github.com/makhatemakhate/VMMC</link>
-    <version>4.1.10.4</version>
+    <version>4.1.10.5</version>
     <path name="templates">
       <value>./templates</value>
     </path>
@@ -89,6 +89,19 @@
                 <value>DATE_YMD</value>
               </configuration>
             </configurationGroup>
+            
+            <configurationGroup name="occupation">
+              <version>4.1.10.5</version>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Occupation</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+            </configurationGroup>
+            
           </configurationGroup>
         </configurationGroup>
         <configurationGroup name="iHRIS_Person">
