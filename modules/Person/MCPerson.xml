@@ -8,7 +8,7 @@
     <creator>Sovello Hildebrand</creator>
     <email>sovellohpmgani@gmail.com</email>
     <link>https://github.com/makhatemakhate/VMMC</link>
-    <version>4.1.10.5</version>
+    <version>4.1.10.7</version>
     <path name="templates">
       <value>./templates</value>
     </path>
@@ -34,6 +34,14 @@
             <displayName>Display name</displayName>
             <description>The display name for this form</description>
             <value>MC Client</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="demographic">
+          <version>4.1.10.7</version>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>iHRIS_VMMC_Demographic</value>
           </configuration>
         </configurationGroup>
       </configurationGroup>
@@ -156,6 +164,26 @@
               <configuration name="in_db" type="boolean">
                 <displayName>This field needs to be saved in the database</displayName>
                 <value>false</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+        <configurationGroup name="iHRIS_VMMC_Demographic">
+          <version>4.1.10.7</version>
+          <configuration name="extends">
+            <displayName>The class this form extends</displayName>
+            <value>iHRIS_Demographic</value>
+          </configuration>
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="age">
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Age</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>THe form field type</displayName>
+                <value>INT</value>
               </configuration>
             </configurationGroup>
           </configurationGroup>
