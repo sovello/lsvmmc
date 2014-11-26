@@ -15,11 +15,21 @@
         <value>1</value>
       </configuration>
       <configurationGroup name='multi_flat_components' path='/modules/forms/storage_options/multi_flat/components'>
-        <configuration name='vmmc_one' values='many' type='delimited'>
-         <value>database:copy_vmmc</value>
-        </configuration><!--
+        <configuration name='leribe' values='many' type='delimited'>
+         <value>database:leribe</value>
+        </configuration>
+        <configuration name='mafeteng' values='many' type='delimited'>
+         <value>database:mafeteng</value>
+        </configuration>
+        <configuration name='apex' values='many' type='delimited'>
+         <value>database:apex</value>
+        </configuration>
+        <configuration name='lehlakeng' values='many' type='delimited'>
+         <value>database:lehlakeng</value>
+        </configuration>
+        <!--
         <configuration name='user_two' values='many' type='delimited'>
-        <value>database:user_two</value>
+        <value>database:user_two Leribe,Mafeteng,Apex and Lehlakeng </value>
         </configuration>-->
       </configurationGroup>
       <configurationGroup name='person'>
