@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="MStatusData">
+  <metadata>
+    <displayName>Marital Status Data</displayName>
+    <category>VMMC</category>
+    <description>A list of marital status</description>
+    <creator>Sovello Hildebrand</creator>
+    <email>sovellohpmgani@gmail.com</email>
+    <version>4.1.10.0</version>
+    <priority>350</priority>
+  </metadata>
+  <configurationGroup name="MStatusData" path="/I2CE">
+    <configurationGroup name="formsData" path="formsData/forms">
+      <displayName>Forms Data</displayName>
+      <description>Form data saved in magic data</description>
+      <configurationGroup name="marital_status">
+        <displayName>Marital Status</displayName>
+        <description>The gender form data</description>
+        <configurationGroup name="1">
+          <configuration name="last_modified">
+            <value>2009-04-27 1:23:45</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <value>name:Single</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="2">
+          <configuration name="last_modified">
+            <value>2009-04-27 1:23:45</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <value>name:Married</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="3">
+          <configuration name="last_modified">
+            <value>2009-04-27 1:23:45</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <value>name:Divorced</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="4">
+          <configuration name="last_modified">
+            <value>2009-04-27 1:23:45</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <value>name:Widowed</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="5">
+          <configuration name="last_modified">
+            <value>2009-04-27 1:23:45</value>
+          </configuration>
+          <configuration name="fields" value="many" type="delimited" locale="en_US">
+            <value>name:Separated</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>
