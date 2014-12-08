@@ -211,9 +211,6 @@ class iHRIS_Module_MCForms extends I2CE_Module {
           }
         }
         
-        if ( !in_array('pr', $form->visit) || in_array('de', $form->visit) || in_array('tr', $form->visit) ){
-            $form->setInvalidMessage( "visit","You must select a visit");
-          }
         }
     /**
      * gets a date value from records read from the datafile

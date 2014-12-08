@@ -8,7 +8,7 @@
     <creator>Sovello Hildebrand</creator>
     <email>sovellohpmgani@gmail.com</email>
     <link>https://github.com/sovello/lsvmmc</link>
-    <version>4.1.10.1</version>
+    <version>4.1.10.3</version>
     <path name="configs">
       <value>./configs</value>
     </path>
@@ -24,6 +24,10 @@
       <atLeast version="4.1" />
       <lessThan version="4.2" />
     </conflict>
+    <requirement name="ihris-common-Search">
+      <atLeast version="4.1" />
+      <lessThan version="4.2" />
+    </requirement>
     <requirement name="CustomReports">
       <atLeast version="4.1" />
       <lessThan version="4.2" />
@@ -51,6 +55,10 @@
       <lessThan version="4.2" />
     </requirement>
     <requirement name="PersonDemographic">
+      <atLeast version="4.1" />
+      <lessThan version="4.2" />
+    </requirement>
+    <requirement name="ihris-common-RecentForm">
       <atLeast version="4.1" />
       <lessThan version="4.2" />
     </requirement>
@@ -235,6 +243,39 @@
           <value>iHRIS_PageFormUser</value>
         </configuration>
       </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="recent_forms" path="/modules/RecentForm/forms">
+      <displayName>Recent Forms</displayName>
+      <description>A list of forms to display in the recent form list with details.</description>
+      <version>4.1.10.2</version>
+      <configurationGroup name="person">
+        <displayName>The person form</displayName>
+        <configuration name="fields" values="many">
+          <displayName>The fields to display in the results</displayName>
+          <value>facility</value>
+          <value>patient_number</value>
+          <value>visit_date</value>
+        </configuration>
+        <configuration name="display" values="single">
+          <displayName>How the results are displayed based on the fields</displayName>
+          <description>A printf string that matches the order of the fields for this form.</description>
+          <value>%s: %s (%s)</value>
+        </configuration>
+        <configuration name="link" values="single">
+          <displayName>The page to link to to display this form.</displayName>
+          <value>view?id=</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="search_reports" path="/modules/CustomReports/search_reports">
+      <displayName>Search Reports</displayName>
+      <description>A list of all reports that need to be generated for the search page. If the value is true then the report will be generated even if other report generation is turned off by /modules/CustomReports/times/background.</description>
+      <version>4.1.10.3</version>
+      <configuration name="1403079934" values="many" type="delimited" locale="en_US">
+        <displayName>The search people report.</displayName>
+        <value>name:Search Clients</value>
+        <value>description:Locate any MC Client record in the system to review, print or update.</value>
+      </configuration>
     </configurationGroup>
     <configurationGroup name="template">
       <displayName>Template Information</displayName>

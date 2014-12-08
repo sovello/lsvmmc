@@ -9,7 +9,7 @@
     <creator>Sovello Hildebrand</creator>
     <email>sovellohpmgani@gmail.com</email>
     <link>https://github.com/makhatemakhate/VMMC</link>
-    <version>4.1.10.5</version>
+    <version>4.1.10.6</version>
     <path name="templates">
       <value>./templates</value>
     </path>
@@ -1013,6 +1013,10 @@
                 <version>4.1.10.1</version>
                 <value>MAP</value>
               </configuration>
+              <configuration name="required" type="boolean">
+                <version>4.1.10.6</version>
+                <value>YES</value>
+              </configuration>
             </configurationGroup>
             <configurationGroup name="visit_date">
               <displayName>The field 'visit_date'</displayName>
@@ -1024,6 +1028,10 @@
               <configuration name="headers" type="delimited" locale="en_US">
                 <displayName>The headers for this field.</displayName>
                    <value>default:Visit Date</value>
+              </configuration>
+              <configuration name="required" type="boolean">
+                <version>4.1.10.6</version>
+                <value>YES</value>
               </configuration>
               <configuration name="default_eval">
                 <displayName>The default Value as an eval string</displayName>
