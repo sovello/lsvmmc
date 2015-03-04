@@ -9,7 +9,7 @@
     <creator>Sovello Hildebrand</creator>
     <email>sovellohpmgani@gmail.com</email>
     <link>https://github.com/makhatemakhate/VMMC</link>
-    <version>4.1.10.6</version>
+    <version>4.1.11.0</version>
     <path name="templates">
       <value>./templates</value>
     </path>
@@ -1018,6 +1018,19 @@
                 <value>YES</value>
               </configuration>
             </configurationGroup>
+            
+            <configurationGroup name="followup">
+              <version>4.1.11.0</version>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Followup</value>
+              </configuration>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>YESNO</value>
+              </configuration>
+            </configurationGroup>
+            
             <configurationGroup name="visit_date">
               <displayName>The field 'visit_date'</displayName>
               <version>4.1.10.1</version>
